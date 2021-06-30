@@ -1,4 +1,4 @@
-package dev.vrba.secrethitler.engine;
+package dev.vrba.secrethitler.engine.election;
 
 import lombok.Getter;
 import org.jetbrains.annotations.NotNull;
