@@ -1,15 +1,13 @@
 package dev.vrba.secrethitler.engine.state.transitions;
 
 import dev.vrba.secrethitler.engine.state.GameState;
-import lombok.Getter;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.UUID;
 
 public abstract class GameStateMessage implements StateTransition {
 
-    @Getter
-    private final UUID sender;
+    protected final UUID sender;
 
     protected GameStateMessage(@NotNull UUID sender) {
         this.sender = sender;

@@ -12,6 +12,7 @@ import lombok.With;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
+import java.util.Collection;
 import java.util.List;
 import java.util.Map;
 import java.util.UUID;
@@ -67,5 +68,28 @@ public class GameState {
                 election,
                 this.winners
         );
+    }
+
+    public @NotNull Collection<UUID> getEligibleChancellorCandidates() {
+        List<PlayerState> playersAlive = this.players.values()
+                .stream()
+                .filter(PlayerState::isAlive)
+                .toList();
+
+        // In case that 5 or less players are left in the game, term limiting is only applied to last elected chancellor
+        boolean lastElectedPresidentIsEligible = playersAlive.size() <= 5;
+
+        List<UUID> eligiblePlayers = playersAlive.stream().map(PlayerState::getId).toList();
+
+        if (this.lastElectedGovernment != null) {
+            // Last elected chancellor is always terms limited
+            eligiblePlayers.remove(this.lastElectedGovernment.getChancellor());
+
+            if (!lastElectedPresidentIsEligible) {
+                eligiblePlayers.remove(this.lastElectedGovernment.getPresident());
+            }
+        }
+
+        return eligiblePlayers;
     }
 }
