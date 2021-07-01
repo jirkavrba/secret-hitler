@@ -1,8 +1,9 @@
 <template>
-  <div :class="'mt-3 px-5 py-3 rounded-lg flex flex-row items-center ' + colors[role].background">
+  <div :class="'mt-3 px-5 py-3 rounded-lg flex flex-row items-center ' + colors[role].background + (alive ? '' : ' filter grayscale opacity-50')">
     <img :src="roles[role]" :alt="role" class="w-12 mr-3">
-    <div class="flex-grow">
-      <span :class="'uppercase font-black text-sm tracking-wide ' + colors[role].foreground">{{ role }}</span>
+    <div class="flex-grow flex flex-col">
+      <span :class="'w-full font-black whitespace-nowrap ' + (alive ? '' : ' line-through')">{{ username.substr(0, 20) }}</span>
+      <span :class="'uppercase text-xs tracking-wide ' + colors[role].foreground">{{ role }}</span>
     </div>
   </div>
 </template>
@@ -20,6 +21,8 @@ export default defineComponent({
   name: "Player",
   props: [
     "id",
+    "alive",
+    "username",
     "role"
   ],
   data: () => ({
@@ -33,8 +36,8 @@ export default defineComponent({
         foreground: "text-red-700"
       },
       "hitler": {
-        background: "bg-gray-800",
-        foreground: "text-red-500",
+        background: "bg-red-200",
+        foreground: "text-red-900",
       },
       "hidden": {
         background: "bg-gray-200",

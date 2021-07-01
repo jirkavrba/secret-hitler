@@ -29,23 +29,28 @@ export default createStore({
                 players: {
                     "3cba6f3c-487f-40d0-a9fb-cdc43c88adfd": {
                         id: "3cba6f3c-487f-40d0-a9fb-cdc43c88adfd",
+                        username: "My name's Jeff",
                         alive: true,
                     },
                     "8ddd8049-155b-4980-b7e6-a79de1e0a20c": {
                         id: "8ddd8049-155b-4980-b7e6-a79de1e0a20c",
+                        username: "0x4a69726b61",
                         alive: true,
                     },
                     "33c3cac2-8009-4470-aa0b-1d0ab5ee0270": {
                         id: "33c3cac2-8009-4470-aa0b-1d0ab5ee0270",
+                        username: "Another Jeff",
                         alive: true,
                     },
                     "5e06a048-866c-4edf-9bdd-8e6ee3b98c10": {
                         id: "5e06a048-866c-4edf-9bdd-8e6ee3b98c10",
+                        username: "Not Jeff at all",
                         alive: true,
                     },
                     "27f1f378-3b4e-428d-8639-766bac14f619": {
                         id: "27f1f378-3b4e-428d-8639-766bac14f619",
-                        alive: true,
+                        username: "Mike, but he's dead",
+                        alive: false,
                     }
                 },
                 enactedPolicies: {

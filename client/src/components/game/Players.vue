@@ -4,10 +4,12 @@
       <h1 class="text-md font-bold uppercase tracking-wide text-gray-500">Players</h1>
 
       <div class="mt-5">
-        <Player v-for="player in Object.keys($store.state.game.gameState.players)"
-                :key="player"
-                :role="$store.state.game.playerState.rolesKnowledge[player].toLowerCase()"
-                :id="player"
+        <Player v-for="player in $store.state.game.gameState.players"
+            :key="player.id"
+            :id="player.id"
+            :alive="player.alive"
+            :username="player.username"
+            :role="$store.state.game.playerState.rolesKnowledge[player.id].toLowerCase()"
         />
       </div>
     </div>
