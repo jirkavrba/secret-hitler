@@ -1,17 +1,17 @@
 <template>
   <div class="app-container">
-    <div class="lg:hidden block bg-black flex flex-col items-center justify-center app-container">
+    <div class="xl:hidden block bg-black flex flex-col items-center justify-center app-container">
       <img alt="Secret Hitler logo" src="./assets/logo.png" class="w-64">
 
       <div class="my-16">
         <h1 class="text-white text-3xl font-black">Sorry,</h1>
         <h2 class="text-gray-300">
-          This shit doesn't work on mobiles
+          This shit doesn't work smaller screens
           <span class="text-gray-500">(yet?)</span>
         </h2>
       </div>
     </div>
-    <div class="hidden lg:block">
+    <div class="hidden xl:block">
       <router-view/>
     </div>
   </div>

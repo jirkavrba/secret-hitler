@@ -1,9 +1,21 @@
 <template>
-  <div :class="'mt-3 px-5 py-3 rounded-lg flex flex-row items-center ' + colors[role].background + (alive ? '' : ' filter grayscale opacity-50')">
+  <div :class="'h-20 mt-3 px-5 py-3 rounded-lg flex flex-row items-center ' +
+    colors[role].background +
+    (alive ? '' : ' filter grayscale opacity-50') +
+    (isPresident() ? ' ring-4 ring-purple-500' : '') +
+    (isChancellor() ? ' ring-4 ring-pink-500' : '')
+   ">
     <img :src="roles[role]" :alt="role" class="w-12 mr-3">
     <div class="flex-grow flex flex-col">
-      <span :class="'w-full font-black whitespace-nowrap ' + (alive ? '' : ' line-through')">{{ username.substr(0, 20) }}</span>
       <span :class="'uppercase text-xs tracking-wide ' + colors[role].foreground">{{ role }}</span>
+      <span :class="'w-full font-black whitespace-nowrap ' + (alive ? '' : ' line-through')">{{ username.substr(0, 20) }}</span>
+
+      <div class="flex">
+        <div v-if="isPresident()" class="text-white text-xs font-black bg-purple-500 px-2 py-1 rounded mr-2">President</div>
+        <div v-if="isChancellor()" class="text-white text-xs font-black bg-pink-400 px-2 py-1 rounded mr-2">Chancellor</div>
+        <div v-if="isLastElectedPresident()" class="text-white text-xs font-black bg-purple-500 px-2 py-1 rounded mr-2 opacity-25">President</div>
+        <div v-if="isLastElectedChancellor()" class="text-white text-xs font-black bg-pink-400 px-2 py-1 rounded mr-2 opacity-25">Chancellor</div>
+      </div>
     </div>
   </div>
 </template>
@@ -25,6 +37,20 @@ export default defineComponent({
     "username",
     "role"
   ],
+  methods: {
+    isPresident() {
+      return this.$store.state.game.gameState.government.president == this.id;
+    },
+    isChancellor() {
+      return this.$store.state.game.gameState.government.chancellor == this.id;
+    },
+    isLastElectedPresident() {
+      return this.$store.state.game.gameState.lastElectedGovernment.president == this.id;
+    },
+    isLastElectedChancellor() {
+      return this.$store.state.game.gameState.lastElectedGovernment.chancellor == this.id;
+    }
+  },
   data: () => ({
     colors: {
       "liberal": {

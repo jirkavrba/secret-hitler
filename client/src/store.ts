@@ -61,11 +61,11 @@ export default createStore({
                 discardingDeckCards: 4,
                 government: {
                     president: "5e06a048-866c-4edf-9bdd-8e6ee3b98c10",
-                    chancellor: null
+                    chancellor: "3cba6f3c-487f-40d0-a9fb-cdc43c88adfd",
                 },
                 lastElectedGovernment: {
                     president: "8ddd8049-155b-4980-b7e6-a79de1e0a20c",
-                    chancellor: "8ddd8049-155b-4980-b7e6-a79de1e0a20c"
+                    chancellor: "27f1f378-3b4e-428d-8639-766bac14f619",
                 },
                 election: {
                     votes: {
