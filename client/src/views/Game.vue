@@ -1,7 +1,7 @@
 <template>
   <div class="grid grid-cols-5 container">
     <Players/>
-    <div class="col-span-3 bg-blue-500">GAME</div>
+    <div class="col-span-3 flex flex-col bg-green-300"></div>
     <div class="bg-green-500">CHAT</div>
   </div>
 </template>

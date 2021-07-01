@@ -49,10 +49,12 @@ export default defineComponent({
       return this.$store.state.game.gameState.government.chancellor == this.id;
     },
     isLastElectedPresident() {
-      return this.$store.state.game.gameState.lastElectedGovernment.president == this.id;
+      return this.$store.state.game.gameState.lastElectedGovernment !== null &&
+             this.$store.state.game.gameState.lastElectedGovernment.president == this.id;
     },
     isLastElectedChancellor() {
-      return this.$store.state.game.gameState.lastElectedGovernment.chancellor == this.id;
+      return this.$store.state.game.gameState.lastElectedGovernment != null &&
+             this.$store.state.game.gameState.lastElectedGovernment.chancellor == this.id;
     }
   },
   data: () => ({
