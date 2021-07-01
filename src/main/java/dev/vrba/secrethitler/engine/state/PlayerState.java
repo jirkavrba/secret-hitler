@@ -20,6 +20,8 @@ public class PlayerState {
 
     private final @NotNull UUID id;
 
+    private final @NotNull String username;
+
     private final boolean alive;
 
     private final @NotNull Role role;
@@ -43,6 +45,7 @@ public class PlayerState {
     public @NotNull PublicPlayerState toPublicState(boolean maskRole) {
         return new PublicPlayerState(
                 this.id,
+                this.username,
                 this.alive,
                 maskRole ? Role.HIDDEN : this.role
         );

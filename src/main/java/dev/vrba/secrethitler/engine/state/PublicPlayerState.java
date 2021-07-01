@@ -13,6 +13,8 @@ public class PublicPlayerState {
 
     private final @NotNull UUID id;
 
+    private final @NotNull String username;
+
     private final boolean alive;
 
     private final @NotNull Role role;
