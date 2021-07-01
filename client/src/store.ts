@@ -25,7 +25,7 @@ export default createStore({
             id: "3cba6f3c-487f-40d0-a9fb-cdc43c88adfd",
             gameState: {
                 playing: true,
-                phase: "PRESIDENT_IS_SELECTING_CHANCELLOR",
+                phase: "VOTING_FOR_THE_GOVERNMENT",
                 players: {
                     "3cba6f3c-487f-40d0-a9fb-cdc43c88adfd": {
                         id: "3cba6f3c-487f-40d0-a9fb-cdc43c88adfd",
@@ -81,8 +81,8 @@ export default createStore({
                 },
                 election: {
                     votes: {
-                        "3cba6f3c-487f-40d0-a9fb-cdc43c88adfd": "NONE",
-                        "8ddd8049-155b-4980-b7e6-a79de1e0a20c": "NONE",
+                        "3cba6f3c-487f-40d0-a9fb-cdc43c88adfd": "NEIN",
+                        "8ddd8049-155b-4980-b7e6-a79de1e0a20c": "JA",
                         "33c3cac2-8009-4470-aa0b-1d0ab5ee0270": "HIDDEN",
                         "34c3cac2-8009-4470-aa0b-1d0ab5ee0270": "NONE",
                         "5e06a048-866c-4edf-9bdd-8e6ee3b98c10": "HIDDEN",

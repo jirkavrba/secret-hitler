@@ -10,13 +10,31 @@
     <img :src="roles[role]" :alt="role" class="w-12 mr-3">
     <div class="flex-grow flex flex-col">
       <span :class="`uppercase text-tiny font-bold tracking-wide ${colors[role].foreground}`">{{ role }}</span>
-      <span :class="`w-full font-black whitespace-nowrap text-white mb-1 ${alive ? '' : ' line-through'}`">{{ username.substr(0, 20) }}</span>
+      <span :class="`w-full font-black whitespace-nowrap text-white mb-1 ${alive ? '' : ' line-through'}`">{{
+          username.substr(0, 20)
+        }}</span>
 
       <div class="flex">
-        <div v-if="isPresident()" class="text-white text-xs font-black bg-yellow-500 px-2 py-1 rounded mr-2">President</div>
-        <div v-if="isChancellor()" class="text-white text-xs font-black bg-green-700 px-2 py-1 rounded mr-2">Chancellor</div>
-        <div v-if="isLastElectedPresident()" class="text-white text-xs font-black bg-gray-500 px-2 py-1 rounded mr-2 opacity-25">President</div>
-        <div v-if="isLastElectedChancellor()" class="text-white text-xs font-black bg-gray-500 px-2 py-1 rounded mr-2 opacity-25">Chancellor</div>
+        <div v-if="isPresident()" class="text-white text-xs font-black bg-yellow-500 px-2 py-1 rounded mr-2">President
+        </div>
+        <div v-if="isChancellor()" class="text-white text-xs font-black bg-green-700 px-2 py-1 rounded mr-2">
+          Chancellor
+        </div>
+        <div v-if="isLastElectedPresident()"
+             class="text-white text-xs font-black bg-gray-500 px-2 py-1 rounded mr-2 opacity-25">President
+        </div>
+        <div v-if="isLastElectedChancellor()"
+             class="text-white text-xs font-black bg-gray-500 px-2 py-1 rounded mr-2 opacity-25">Chancellor
+        </div>
+      </div>
+    </div>
+    <div v-if="showVotes() && alive">
+      <div v-if="vote() === 'HIDDEN'" class="opacity-50">
+        <img :src="votes.none" alt="Player has not voted yet" title="Player has not voted yet"
+             class="w-12 rounded filter grayscale animate-pulse">
+      </div>
+      <div v-else>
+        <img :src="votes[vote().toLowerCase()]" alt="" class="w-12 rounded filter shadow-lg">
       </div>
     </div>
   </div>
@@ -25,10 +43,14 @@
 <script lang="ts">
 import {defineComponent} from "vue";
 
-import liberal from "../../assets/roles/liberal.png"
-import fascist from "../../assets/roles/fascist.png"
-import hitler from "../../assets/roles/hitler.png"
-import hidden from "../../assets/roles/hidden.png"
+import liberal from "../../assets/roles/liberal.png";
+import fascist from "../../assets/roles/fascist.png";
+import hitler from "../../assets/roles/hitler.png";
+import hidden from "../../assets/roles/hidden.png";
+
+import ballot from "../../assets/votes/ballot.png";
+import ja from "../../assets/votes/ja.png";
+import nein from "../../assets/votes/nein.png";
 
 
 export default defineComponent({
@@ -50,30 +72,36 @@ export default defineComponent({
     },
     isLastElectedPresident() {
       return this.$store.state.game.gameState.lastElectedGovernment !== null &&
-             this.$store.state.game.gameState.lastElectedGovernment.president == this.id;
+          this.$store.state.game.gameState.lastElectedGovernment.president == this.id;
     },
     isLastElectedChancellor() {
       return this.$store.state.game.gameState.lastElectedGovernment != null &&
-             this.$store.state.game.gameState.lastElectedGovernment.chancellor == this.id;
+          this.$store.state.game.gameState.lastElectedGovernment.chancellor == this.id;
+    },
+    showVotes() {
+      return this.$store.state.game.gameState.phase === "VOTING_FOR_THE_GOVERNMENT";
+    },
+    vote() {
+      return this.$store.state.game.gameState.election.votes[this.id];
     }
   },
   data: () => ({
     colors: {
       "liberal": {
-        background: "bg-blue-900 filter saturate-50",
+        background: "bg-blue-900 filter",
         foreground: "text-blue-500",
       },
       "fascist": {
-        background: "bg-red-800 filter saturate-50",
+        background: "bg-red-800 filter",
         foreground: "text-red-400"
       },
       "hitler": {
-        background: "bg-red-900 filter saturate-25",
+        background: "bg-red-900 filter",
         foreground: "text-red-200",
       },
       "hidden": {
-        background: "bg-gray-800",
-        foreground: "text-gray-600"
+        background: "bg-gray-700",
+        foreground: "text-gray-400"
       }
     },
     roles: {
@@ -81,6 +109,12 @@ export default defineComponent({
       fascist,
       hitler,
       hidden
+    },
+    votes: {
+      "none": ballot,
+      "hidden": ballot,
+      "ja": ja,
+      "nein": nein
     }
   })
 })
