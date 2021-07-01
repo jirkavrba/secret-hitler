@@ -1,11 +1,10 @@
 package dev.vrba.secrethitler.engine.state;
 
 import dev.vrba.secrethitler.engine.EnactedPolicies;
-import dev.vrba.secrethitler.engine.Party;
-import dev.vrba.secrethitler.engine.Phase;
-import dev.vrba.secrethitler.engine.election.Election;
+import dev.vrba.secrethitler.engine.Party; import dev.vrba.secrethitler.engine.Phase; import dev.vrba.secrethitler.engine.election.Election;
 import dev.vrba.secrethitler.engine.election.Government;
 import dev.vrba.secrethitler.engine.election.Vote;
+import dev.vrba.secrethitler.engine.state.transitions.StateTransition;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.With;
@@ -68,6 +67,14 @@ public class GameState {
                 election,
                 this.winners
         );
+    }
+
+    public @NotNull GameState applyTransition(@NotNull StateTransition transition) {
+        if (transition.validate(this)) {
+            return transition.apply(this);
+        }
+
+        return this;
     }
 
     public @NotNull Collection<UUID> getEligibleChancellorCandidates() {
