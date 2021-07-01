@@ -80,7 +80,7 @@ export default createStore({
                     "3cba6f3c-487f-40d0-a9fb-cdc43c88adfd": "HIDDEN",
                     "8ddd8049-155b-4980-b7e6-a79de1e0a20c": "LIBERAL",
                     "33c3cac2-8009-4470-aa0b-1d0ab5ee0270": "HITLER",
-                    "5e06a048-866c-4edf-9bdd-8e6ee3b98c10": "FASICST",
+                    "5e06a048-866c-4edf-9bdd-8e6ee3b98c10": "FASCIST",
                     "27f1f378-3b4e-428d-8639-766bac14f619": "LIBERAL"
                 },
                 availablePlayerTargets: [],
