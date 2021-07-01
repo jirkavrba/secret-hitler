@@ -3,6 +3,9 @@
     <Players/>
     <div class="col-span-3 flex flex-col">
       <EnactedPolicies/>
+      <div class="flex flex-row items-start">
+        <ElectionTracker/>
+      </div>
     </div>
     <div class="bg-green-500">CHAT</div>
   </div>
@@ -19,10 +22,12 @@
 import {defineComponent} from 'vue';
 import Players from "../components/game/Players.vue";
 import EnactedPolicies from "../components/game/EnactedPolicies.vue";
+import ElectionTracker from "../components/game/ElectionTracker.vue";
 
 export default defineComponent({
   name: "Game",
   components: {
+    ElectionTracker,
     EnactedPolicies,
     Players
   }

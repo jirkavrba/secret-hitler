@@ -57,6 +57,7 @@ export default createStore({
                     fascist: 2,
                     liberal: 3
                 },
+                electionTracker: 0,
                 drawingDeckCards: 3,
                 discardingDeckCards: 4,
                 government: {

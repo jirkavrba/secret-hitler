@@ -1,6 +1,6 @@
 <template>
-  <div class="p-3">
-    <div class="rounded p-5">
+  <div class="p-3 pb-0">
+    <div class="rounded p-5 bg-gray-50">
       <div class="bg-blue-100 p-5 rounded flex">
         <div v-for="i in liberal" :key="i" class="bg-blue-200 m-3 rounded w-24 h-32">
           <img src="../../assets/policies/liberal.png" alt="Fascist policy"
