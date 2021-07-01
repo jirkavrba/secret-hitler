@@ -30,27 +30,22 @@ export default createStore({
                     "3cba6f3c-487f-40d0-a9fb-cdc43c88adfd": {
                         id: "3cba6f3c-487f-40d0-a9fb-cdc43c88adfd",
                         alive: true,
-                        role: "HIDDEN"
                     },
                     "8ddd8049-155b-4980-b7e6-a79de1e0a20c": {
                         id: "8ddd8049-155b-4980-b7e6-a79de1e0a20c",
                         alive: true,
-                        role: "HITLER"
                     },
                     "33c3cac2-8009-4470-aa0b-1d0ab5ee0270": {
                         id: "33c3cac2-8009-4470-aa0b-1d0ab5ee0270",
                         alive: true,
-                        role: "FASCIST"
                     },
                     "5e06a048-866c-4edf-9bdd-8e6ee3b98c10": {
                         id: "5e06a048-866c-4edf-9bdd-8e6ee3b98c10",
                         alive: true,
-                        role: "LIBERAL"
                     },
                     "27f1f378-3b4e-428d-8639-766bac14f619": {
                         id: "27f1f378-3b4e-428d-8639-766bac14f619",
                         alive: true,
-                        role: "HIDDEN"
                     }
                 },
                 enactedPolicies: {
@@ -79,7 +74,20 @@ export default createStore({
                 winners: null
             },
             playerState: {
-                // TODO
+                id: "33c3cac2-8009-4470-aa0b-1d0ab5ee0270",
+                alive: true,
+                rolesKnowledge: {
+                    "3cba6f3c-487f-40d0-a9fb-cdc43c88adfd": "HIDDEN",
+                    "8ddd8049-155b-4980-b7e6-a79de1e0a20c": "LIBERAL",
+                    "33c3cac2-8009-4470-aa0b-1d0ab5ee0270": "HITLER",
+                    "5e06a048-866c-4edf-9bdd-8e6ee3b98c10": "FASICST",
+                    "27f1f378-3b4e-428d-8639-766bac14f619": "LIBERAL"
+                },
+                availablePlayerTargets: [],
+                availablePolicies: [],
+                availableClaims: [],
+                peekedPolicies: [],
+                investigatedPartyMembership: null
             }
         }
     }
