@@ -1,22 +1,22 @@
 <template>
   <div class="p-3 pb-0">
-    <div class="rounded p-5 bg-gray-50">
-      <div class="bg-blue-100 p-5 rounded flex">
-        <div v-for="i in liberal" :key="i" class="bg-blue-200 m-3 rounded w-24 h-32">
+    <div class="rounded p-5 bg-gray-900">
+      <div class="bg-blue-900 filter saturate-50 p-5 rounded flex">
+        <div v-for="i in liberal" :key="i" class="bg-blue-600 m-3 rounded w-24 h-32">
           <img src="../../assets/policies/liberal.png" alt="Fascist policy"
                :class="`transform filter -translate-y-2 scale-75 drop-shadow-lg ${rotation(i)}`">
         </div>
         <div v-for="i in (5 - liberal)" :key="i"
-             class="bg-blue-50 m-3 rounded w-24 h-32 border-2 border-blue-200 border-dashed"></div>
+             class=" m-3 rounded w-24 h-32 border-2 border-blue-500 border-dashed"></div>
       </div>
 
-      <div class="bg-red-100 p-5 rounded flex mt-5">
-        <div v-for="i in fascist" :key="i" class="bg-red-200 m-3 rounded w-24 h-32">
+      <div class="bg-red-900 filter saturate-50 p-5 rounded flex mt-5">
+        <div v-for="i in fascist" :key="i" class="bg-red-600 m-3 rounded w-24 h-32">
           <img src="../../assets/policies/fascist.png" alt="Fascist policy"
                :class="`transform filter -translate-y-2 scale-75 drop-shadow-lg ${rotation(5 + i)}`">
         </div>
         <div v-for="i in (6 - fascist)" :key="i"
-             class="bg-red-50 m-3 rounded w-24 h-32 border-2 border-red-200 border-dashed"></div>
+             class="m-3 rounded w-24 h-32 border-2 border-red-500 border-dashed"></div>
       </div>
     </div>
   </div>

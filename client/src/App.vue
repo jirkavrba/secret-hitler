@@ -1,5 +1,5 @@
 <template>
-  <div class="app-container">
+  <div class="app-container bg-black">
     <div class="xl:hidden block bg-black flex flex-col items-center justify-center app-container">
       <img alt="Secret Hitler logo" src="./assets/logo.png" class="w-64">
 
