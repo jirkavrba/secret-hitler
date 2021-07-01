@@ -9,8 +9,8 @@
    ">
     <img :src="roles[role]" :alt="role" class="w-12 mr-3">
     <div class="flex-grow flex flex-col">
-      <span :class="'uppercase text-xs tracking-wide ' + colors[role].foreground">{{ role }}</span>
-      <span :class="'w-full font-black whitespace-nowrap ' + (alive ? '' : ' line-through')">{{ username.substr(0, 20) }}</span>
+      <span :class="`uppercase text-tiny font-bold tracking-wide ${colors[role].foreground}`">{{ role }}</span>
+      <span :class="`w-full font-black whitespace-nowrap ${alive ? '' : ' line-through'}`">{{ username.substr(0, 20) }}</span>
 
       <div class="flex">
         <div v-if="isPresident()" class="text-white text-xs font-black bg-purple-500 px-2 py-1 rounded mr-2">President</div>
