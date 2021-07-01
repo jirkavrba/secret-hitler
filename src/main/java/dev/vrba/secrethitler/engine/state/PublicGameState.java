@@ -3,7 +3,6 @@ package dev.vrba.secrethitler.engine.state;
 import dev.vrba.secrethitler.engine.EnactedPolicies;
 import dev.vrba.secrethitler.engine.Party;
 import dev.vrba.secrethitler.engine.Phase;
-import dev.vrba.secrethitler.engine.election.Election;
 import dev.vrba.secrethitler.engine.election.Government;
 import dev.vrba.secrethitler.engine.election.Vote;
 import lombok.AllArgsConstructor;
@@ -24,6 +23,8 @@ public class PublicGameState {
     private final @NotNull Map<UUID, PublicPlayerState> players;
 
     private final @NotNull EnactedPolicies enactedPolicies;
+
+    private final int electionTracker;
 
     private final int drawingDeckCards;
 

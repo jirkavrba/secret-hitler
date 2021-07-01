@@ -30,6 +30,8 @@ public class GameState {
 
     private final @NotNull EnactedPolicies enactedPolicies;
 
+    private final int electionTracker;
+
     private final @NotNull List<Party> drawingDeck;
 
     private final @NotNull List<Party> discardingDeck;
@@ -60,6 +62,7 @@ public class GameState {
                 this.phase,
                 players,
                 this.enactedPolicies,
+                this.electionTracker,
                 this.drawingDeck.size(),
                 this.discardingDeck.size(),
                 this.government,
