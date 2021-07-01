@@ -1,7 +1,9 @@
 <template>
-  <div :class="'h-20 mt-3 px-5 py-3 rounded-lg flex flex-row items-center ' +
+  <div :class="'h-20 mt-3 px-5 py-3 rounded-lg flex flex-row items-center transition ' +
     colors[role].background +
     (alive ? '' : ' filter grayscale opacity-50') +
+    ((selectable && !enabled) ? ' opacity-25' : ' ') +
+    ((selectable && enabled) ? ' cursor-pointer transform hover:translate-x-3 hover:shadow-xl shadow-red-500 hover:opacity-90 ': '') +
     (isPresident() ? ' ring-4 ring-purple-500' : '') +
     (isChancellor() ? ' ring-4 ring-pink-500' : '')
    ">
@@ -35,6 +37,8 @@ export default defineComponent({
     "id",
     "alive",
     "username",
+    "selectable",
+    "enabled",
     "role"
   ],
   methods: {

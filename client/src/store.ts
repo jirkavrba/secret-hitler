@@ -88,7 +88,10 @@ export default createStore({
                     "5e06a048-866c-4edf-9bdd-8e6ee3b98c10": "FASCIST",
                     "27f1f378-3b4e-428d-8639-766bac14f619": "LIBERAL"
                 },
-                availablePlayerTargets: [],
+                availablePlayerTargets: [
+                    "33c3cac2-8009-4470-aa0b-1d0ab5ee0270",
+                    "5e06a048-866c-4edf-9bdd-8e6ee3b98c10"
+                ],
                 availablePolicies: [],
                 availableClaims: [],
                 peekedPolicies: [],
