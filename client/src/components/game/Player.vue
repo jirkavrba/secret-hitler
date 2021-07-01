@@ -5,7 +5,7 @@
     ((selectable && !enabled) ? ' opacity-25' : ' ') +
     ((selectable && enabled) ? ' cursor-pointer transform hover:translate-x-3 hover:shadow-xl shadow-red-500 hover:opacity-90 ': '') +
     (isPresident() ? ' ring-4 ring-yellow-500' : '') +
-    (isChancellor() ? ' ring-4 ring-pink-500' : '')
+    (isChancellor() ? ' ring-4 ring-green-700' : '')
    ">
     <img :src="roles[role]" :alt="role" class="w-12 mr-3">
     <div class="flex-grow flex flex-col">
@@ -14,7 +14,7 @@
 
       <div class="flex">
         <div v-if="isPresident()" class="text-white text-xs font-black bg-yellow-500 px-2 py-1 rounded mr-2">President</div>
-        <div v-if="isChancellor()" class="text-white text-xs font-black bg-pink-400 px-2 py-1 rounded mr-2">Chancellor</div>
+        <div v-if="isChancellor()" class="text-white text-xs font-black bg-green-700 px-2 py-1 rounded mr-2">Chancellor</div>
         <div v-if="isLastElectedPresident()" class="text-white text-xs font-black bg-gray-500 px-2 py-1 rounded mr-2 opacity-25">President</div>
         <div v-if="isLastElectedChancellor()" class="text-white text-xs font-black bg-gray-500 px-2 py-1 rounded mr-2 opacity-25">Chancellor</div>
       </div>

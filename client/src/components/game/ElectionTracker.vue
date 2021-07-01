@@ -1,7 +1,7 @@
 <template>
   <div class="p-3">
     <div class="p-5 bg-gray-900 rounded">
-      <h1 class="text-md font-bold uppercase tracking-wide text-gray-500">Election tracker</h1>
+      <h1 class="text-sm font-bold uppercase tracking-wide text-gray-500 text-center">Election tracker</h1>
 
       <div class="flex flex-row items-center mt-3">
         <div v-for="i in 4" :key="i" class="flex flex-row items-center uppercase text-tiny font-bold tracking-wide">
