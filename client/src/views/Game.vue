@@ -1,7 +1,7 @@
 <template>
-  <div class="grid grid-cols-5 container">
+  <div class="grid grid-cols-4 container">
     <Players/>
-    <div class="col-span-3 flex flex-col">
+    <div class="col-span-2 flex flex-col">
       <EnactedPolicies/>
       <div class="flex flex-row items-start justify-between">
         <ElectionTracker/>
