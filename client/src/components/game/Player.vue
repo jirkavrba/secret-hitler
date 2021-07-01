@@ -68,7 +68,7 @@ export default defineComponent({
         foreground: "text-red-400"
       },
       "hitler": {
-        background: "bg-red-900 filter saturate-50",
+        background: "bg-red-900 filter saturate-25",
         foreground: "text-red-200",
       },
       "hidden": {
