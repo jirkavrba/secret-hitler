@@ -8,7 +8,7 @@
       <div class="mt-3 flex flex-row p-5">
         <img :src="images.ja" alt="Ja!"
              :class="`w-32 rounded mr-6 cursor-pointer transform transition
-             ${selected === 'ja' ? 'scale-110 ring-8 ring-green-600 z-20' : 'hover:scale-90 hover:rotate-6'}
+             ${selected === 'ja' ? 'scale-110 ring-8 ring-green-600 z-20' : 'hover:scale-90 hover:-rotate-6'}
              ${selected === 'nein' ? 'opacity-30 translate-x-16 hover:translate-x-8 hover:opacity-60' : ''}
              `" @click="vote('ja')">
 
