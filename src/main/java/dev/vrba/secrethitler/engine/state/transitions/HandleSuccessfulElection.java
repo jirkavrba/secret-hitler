@@ -44,6 +44,7 @@ public class HandleSuccessfulElection implements StateTransition {
                 .withDrawingDeck(deck)
                 .withPlayers(players)
                 .withGovernmentPolicyPool(pool)
+                .withElectionTracker(0)
                 .withElection(null)
                 .apply(ShuffleDrawingDeck::new);
     }

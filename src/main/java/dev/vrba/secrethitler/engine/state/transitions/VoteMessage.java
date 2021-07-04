@@ -35,7 +35,7 @@ public class VoteMessage extends GameStateMessage {
             }
 
             else {
-                // TODO: handle failed election
+                return state.apply(HandleFailedElection::new);
             }
         }
 
