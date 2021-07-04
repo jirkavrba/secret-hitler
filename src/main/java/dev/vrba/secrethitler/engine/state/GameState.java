@@ -73,14 +73,6 @@ public class GameState {
         );
     }
 
-    public @NotNull GameState applyTransition(@NotNull StateTransition transition) {
-        if (transition.validate(this)) {
-            return transition.apply(this);
-        }
-
-        return this;
-    }
-
     public @NotNull Collection<UUID> getEligibleChancellorCandidates() {
         List<PlayerState> playersAlive = this.players.values()
                 .stream()
