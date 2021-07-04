@@ -1,11 +1,11 @@
 <template>
   <div class="p-3">
-    <div class="rounded bg-gray-900 p-5 z-10">
+    <div class="rounded bg-gray-900 p-5 z-10 relative">
       <h1 class="text-md font-bold uppercase tracking-wide text-gray-500">Players</h1>
 
-      <div class="mt-10 relative">
-        <div v-if="$store.state.game.playerState.availablePlayerTargets.length > 0"
-            class="absolute left-0 top-0 ring-offset-black bg-black w-full h-full ring-highlight ring-offset-highlight duration-75 ring-yellow-200 rounded animate-pulse"></div>
+      <Highlight v-if="$store.state.game.playerState.availablePlayerTargets.length > 0"/>
+
+      <div class="mt-10">
         <Player v-for="player in $store.state.game.gameState.players"
             :key="player.id"
             :id="player.id"
@@ -23,10 +23,11 @@
 <script lang="ts">
 import {defineComponent} from "vue";
 import Player from "./Player.vue";
+import Highlight from "./Highlight.vue";
 
 export default defineComponent({
   name: "Players",
-  components: {Player}
+  components: {Highlight, Player}
 })
 </script>
 

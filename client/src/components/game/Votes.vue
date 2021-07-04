@@ -1,8 +1,7 @@
 <template>
   <div v-if="$store.state.game.gameState.phase === 'VOTING_FOR_THE_GOVERNMENT'" class="p-3 relative self-start">
-    <div
-        class="absolute left-0 top-0 ring-offset-black w-full h-full ring-highlight ring-offset-highlight duration-75 ring-yellow-200 rounded animate-pulse"></div>
-    <div class="p-5 bg-gray-900 rounded">
+    <Highlight/>
+    <div class="p-3 bg-gray-900 rounded">
       <h1 class="text-sm font-bold uppercase tracking-wide text-gray-500 text-left">Vote for the government</h1>
 
       <div class="mt-3 flex flex-row p-5">
@@ -27,9 +26,11 @@
 import {defineComponent} from "vue";
 import ja from "../../assets/votes/ja.png";
 import nein from "../../assets/votes/nein.png";
+import Highlight from "./Highlight.vue";
 
 export default defineComponent({
   name: "Votes",
+  components: {Highlight},
   data: () => ({
     selected: null,
     images: {
