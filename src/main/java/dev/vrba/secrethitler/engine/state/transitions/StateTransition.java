@@ -5,7 +5,9 @@ import org.jetbrains.annotations.NotNull;
 
 public interface StateTransition {
 
-    boolean validate(@NotNull GameState state);
+    default boolean validate(@NotNull GameState state) {
+        return true;
+    }
 
     @NotNull GameState apply(@NotNull GameState state);
 }

@@ -1,10 +1,13 @@
 package dev.vrba.secrethitler.engine.state.transitions;
 
 import dev.vrba.secrethitler.engine.Phase;
+import dev.vrba.secrethitler.engine.election.Election;
 import dev.vrba.secrethitler.engine.election.Vote;
 import dev.vrba.secrethitler.engine.state.GameState;
 import org.jetbrains.annotations.NotNull;
+import org.springframework.asm.Handle;
 
+import java.util.Objects;
 import java.util.UUID;
 
 public class VoteMessage extends GameStateMessage {
@@ -18,11 +21,25 @@ public class VoteMessage extends GameStateMessage {
 
     @Override
     protected boolean validateState(@NotNull GameState state) {
-        return state.getPhase() == Phase.VOTING_FOR_THE_GOVERNMENT;
+        return state.getPhase() == Phase.VOTING_FOR_THE_GOVERNMENT &&
+               state.getElection() != null;
     }
 
     @Override
     public @NotNull GameState apply(@NotNull GameState state) {
-        return state;
+        Election election = Objects.requireNonNull(state.getElection()).vote(this.sender, this.vote);
+
+        if (election.isFinished()) {
+
+            if (election.isSuccessful()) {
+                return new HandleSuccessfulElection().apply(state);
+            }
+
+            else {
+                // TODO: handle failed election
+            }
+        }
+
+        return state.withElection(election);
     }
 }

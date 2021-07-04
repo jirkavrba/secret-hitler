@@ -16,7 +16,7 @@ public class ShuffleDrawingDeck implements StateTransition {
 
     @Override
     public @NotNull GameState apply(@NotNull GameState state) {
-        if (state.getDrawingDeck().size() <= 2) {
+        if (state.getDrawingDeck().size() <= 3) {
             List<Party> deck = new ArrayList<>();
 
             deck.addAll(state.getDrawingDeck());
