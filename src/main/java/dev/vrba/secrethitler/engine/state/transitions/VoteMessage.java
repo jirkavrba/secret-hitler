@@ -32,7 +32,7 @@ public class VoteMessage extends GameStateMessage {
         if (election.isFinished()) {
 
             if (election.isSuccessful()) {
-                return new HandleSuccessfulElection().apply(state);
+                return state.apply(HandleSuccessfulElection::new);
             }
 
             else {
