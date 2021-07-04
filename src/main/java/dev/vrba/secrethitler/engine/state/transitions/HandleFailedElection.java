@@ -2,7 +2,6 @@ package dev.vrba.secrethitler.engine.state.transitions;
 
 import dev.vrba.secrethitler.engine.EnactedPolicies;
 import dev.vrba.secrethitler.engine.Party;
-import dev.vrba.secrethitler.engine.Phase;
 import dev.vrba.secrethitler.engine.state.GameState;
 import org.jetbrains.annotations.NotNull;
 
@@ -22,11 +21,12 @@ public class HandleFailedElection implements StateTransition{
                     .withElectionTracker(0)
                     .withElection(null)
                     .withEnactedPolicies(policies)
-                    .withPhase(Phase.PRESIDENT_IS_SELECTING_CHANCELLOR);
+                    .apply(PassThePresidentialCandidacy::new);
         }
 
         return state
                 .withElection(null)
-                .withElectionTracker(0);
+                .withElectionTracker(0)
+                .apply(PassThePresidentialCandidacy::new);
     }
 }

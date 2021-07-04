@@ -75,7 +75,7 @@ public class GameState {
         );
     }
 
-    public @NotNull Collection<UUID> getEligibleChancellorCandidates() {
+    public @NotNull List<UUID> getEligibleChancellorCandidates() {
         List<PlayerState> playersAlive = this.players.values()
                 .stream()
                 .filter(PlayerState::isAlive)
