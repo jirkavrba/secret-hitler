@@ -16,6 +16,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.UUID;
 import java.util.function.Function;
+import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
 @With
@@ -101,5 +102,18 @@ public class GameState {
         }
 
         return eligiblePlayers;
+    }
+
+    public @NotNull GameState apply(@NotNull StateTransition transition) {
+        // Only apply the specified transition if it is valid for the given state
+        if (!transition.validate(this)) {
+            return this;
+        }
+
+        return transition.apply(this);
+    }
+
+    public @NotNull GameState apply(@NotNull Supplier<StateTransition> supplier) {
+        return this.apply(supplier.get());
     }
 }

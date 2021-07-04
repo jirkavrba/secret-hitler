@@ -39,13 +39,13 @@ public class HandleSuccessfulElection implements StateTransition {
 
         players.put(president, players.get(president).withAvailablePolicies(pool));
 
-        return new ShuffleDrawingDeck().apply(
-                state
-                    .withPhase(Phase.PRESIDENT_IS_SELECTING_POLICY)
-                    .withDrawingDeck(deck)
-                    .withPlayers(players)
-                    .withGovernmentPolicyPool(pool)
-                    .withElection(null)
-        );
+        GameState updated = state
+                        .withPhase(Phase.PRESIDENT_IS_SELECTING_POLICY)
+                        .withDrawingDeck(deck)
+                        .withPlayers(players)
+                        .withGovernmentPolicyPool(pool)
+                        .withElection(null);
+
+        return new ShuffleDrawingDeck().apply(updated);
     }
 }
