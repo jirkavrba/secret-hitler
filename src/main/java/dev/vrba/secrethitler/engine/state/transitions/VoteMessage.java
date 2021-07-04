@@ -5,7 +5,6 @@ import dev.vrba.secrethitler.engine.election.Election;
 import dev.vrba.secrethitler.engine.election.Vote;
 import dev.vrba.secrethitler.engine.state.GameState;
 import org.jetbrains.annotations.NotNull;
-import org.springframework.asm.Handle;
 
 import java.util.Objects;
 import java.util.UUID;

@@ -1,7 +1,9 @@
 package dev.vrba.secrethitler.engine.state;
 
 import dev.vrba.secrethitler.engine.EnactedPolicies;
-import dev.vrba.secrethitler.engine.Party; import dev.vrba.secrethitler.engine.Phase; import dev.vrba.secrethitler.engine.election.Election;
+import dev.vrba.secrethitler.engine.Party;
+import dev.vrba.secrethitler.engine.Phase;
+import dev.vrba.secrethitler.engine.election.Election;
 import dev.vrba.secrethitler.engine.election.Government;
 import dev.vrba.secrethitler.engine.election.Vote;
 import dev.vrba.secrethitler.engine.state.transitions.StateTransition;
