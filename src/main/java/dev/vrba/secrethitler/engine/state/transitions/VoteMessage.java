@@ -29,7 +29,6 @@ public class VoteMessage extends GameStateMessage {
         Election election = Objects.requireNonNull(state.getElection()).vote(this.sender, this.vote);
 
         if (election.isFinished()) {
-
             if (election.isSuccessful()) {
                 return state.apply(HandleSuccessfulElection::new);
             }
