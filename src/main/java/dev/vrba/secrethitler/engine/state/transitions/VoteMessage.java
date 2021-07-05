@@ -8,6 +8,7 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.Objects;
 import java.util.UUID;
+import java.util.function.Supplier;
 
 public class VoteMessage extends GameStateMessage {
 
@@ -29,13 +30,11 @@ public class VoteMessage extends GameStateMessage {
         Election election = Objects.requireNonNull(state.getElection()).vote(this.sender, this.vote);
 
         if (election.isFinished()) {
-            if (election.isSuccessful()) {
-                return state.apply(HandleSuccessfulElection::new);
-            }
+            final Supplier<StateTransition> transition = election.isSuccessful()
+                ? HandleSuccessfulElection::new
+                : HandleFailedElection::new;
 
-            else {
-                return state.apply(HandleFailedElection::new);
-            }
+            return state.apply(transition);
         }
 
         return state.withElection(election);
