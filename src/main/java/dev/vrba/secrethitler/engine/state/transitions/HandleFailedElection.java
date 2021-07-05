@@ -21,7 +21,8 @@ public class HandleFailedElection implements StateTransition{
                     .withElectionTracker(0)
                     .withElection(null)
                     .withEnactedPolicies(policies)
-                    .apply(PassThePresidentialCandidacy::new);
+                    .apply(PassThePresidentialCandidacy::new)
+                    .apply(CheckPoliciesForWinnerParty::new);
         }
 
         return state

@@ -17,6 +17,10 @@ public class EnactedPolicies {
 
     private final Map<Integer, PresidentialAbility> abilities;
 
+    public static final int REQUIRED_FASCIST_POLICIES = 6;
+
+    public static final int REQUIRED_LIBERAL_POLICIES = 5;
+
     public EnactedPolicies(int players) {
         this.fascist = 0;
         this.liberal = 0;
