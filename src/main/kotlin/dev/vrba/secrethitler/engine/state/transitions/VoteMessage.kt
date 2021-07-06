@@ -21,8 +21,8 @@ class VoteMessage(sender: UUID, private val vote: Vote) : TransitionMessage(send
 
         if (election.finished) {
             return state.transition(
-                if (election.successful) TODO("HandleSuccessfulElection")
-                else TODO("HandleFailedElection")
+                if (election.successful) HandleSuccessfulElection()
+                else HandleFailedElection()
             )
         }
 
