@@ -2,6 +2,8 @@ package dev.vrba.secrethitler.engine.election
 
 import java.util.*
 
+fun createElection(players: Collection<UUID>): Election = Election(players.associateWith { Vote.None })
+
 class Election(private val votes: Map<UUID, Vote>) {
 
     val finished: Boolean = votes.values.none { it == Vote.None }
