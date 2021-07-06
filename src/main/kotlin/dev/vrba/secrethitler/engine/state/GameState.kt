@@ -25,7 +25,7 @@ data class PublicGameState(
 
 data class GameState(
     val playing: Boolean,
-     val phase: GamePhase,
+    val phase: GamePhase,
     val players: Map<UUID, PlayerState>,
     val enactedPolicies: EnactedPolicies,
     val electionTracker: Int,
