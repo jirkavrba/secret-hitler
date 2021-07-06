@@ -52,12 +52,12 @@ data class GameState(
             winners
         )
 
-    val playersAlive: List<PlayerState> = players.values.filter { it.alive }
+    val playersAlive: List<UUID> = players.values.filter { it.alive }.map { it.id }
 
     val eligibleChancellorCandidates: List<UUID>
         get() {
             val lastElectedPresidentIsEligible = playersAlive.size <= 5
-            val players = playersAlive.map { it.id }.toMutableList()
+            val players = playersAlive.toMutableList()
 
             if (lastElectedGovernment != null) {
                 players.remove(lastElectedGovernment.chancellor)

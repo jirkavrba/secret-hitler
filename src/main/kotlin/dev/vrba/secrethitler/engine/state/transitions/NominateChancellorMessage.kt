@@ -18,5 +18,4 @@ class NominateChancellorMessage(sender: UUID, private val selected: UUID) : Tran
             government = Government(state.government.president, selected),
             election = createElection(state.players.keys)
         )
-
 }
