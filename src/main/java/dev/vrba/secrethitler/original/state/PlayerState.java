@@ -1,8 +1,8 @@
-package dev.vrba.secrethitler.engine.state;
+package dev.vrba.secrethitler.original.state;
 
-import dev.vrba.secrethitler.engine.Party;
-import dev.vrba.secrethitler.engine.Role;
-import dev.vrba.secrethitler.engine.claims.Claim;
+import dev.vrba.secrethitler.original.Party;
+import dev.vrba.secrethitler.original.Role;
+import dev.vrba.secrethitler.original.claims.Claim;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.With;

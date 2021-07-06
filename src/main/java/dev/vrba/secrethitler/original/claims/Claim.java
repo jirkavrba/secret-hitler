@@ -1,4 +1,4 @@
-package dev.vrba.secrethitler.engine.claims;
+package dev.vrba.secrethitler.original.claims;
 
 public interface Claim {
     // This interface only exists, so policy claims and

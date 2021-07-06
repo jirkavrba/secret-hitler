@@ -1,6 +1,6 @@
-package dev.vrba.secrethitler.engine.state.transitions;
+package dev.vrba.secrethitler.original.state.transitions;
 
-import dev.vrba.secrethitler.engine.state.GameState;
+import dev.vrba.secrethitler.original.state.GameState;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.UUID;

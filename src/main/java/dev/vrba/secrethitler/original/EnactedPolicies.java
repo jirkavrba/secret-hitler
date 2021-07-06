@@ -1,6 +1,6 @@
-package dev.vrba.secrethitler.engine;
+package dev.vrba.secrethitler.original;
 
-import dev.vrba.secrethitler.engine.election.PresidentialAbility;
+import dev.vrba.secrethitler.original.election.PresidentialAbility;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import org.jetbrains.annotations.NotNull;
