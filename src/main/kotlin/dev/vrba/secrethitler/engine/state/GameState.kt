@@ -1,5 +1,6 @@
 package dev.vrba.secrethitler.engine.state
 
+import dev.vrba.secrethitler.engine.GamePhase
 import dev.vrba.secrethitler.engine.Party
 import dev.vrba.secrethitler.engine.election.Election
 import dev.vrba.secrethitler.engine.election.Vote
@@ -10,7 +11,7 @@ import java.util.*
 
 data class PublicGameState(
     val playing: Boolean,
-    // val phase: GamePhase,
+    val phase: GamePhase,
     val players: Map<UUID, PublicPlayerState>,
     val enactedPolicies: EnactedPolicies,
     val electionTracker: Int,
@@ -24,7 +25,7 @@ data class PublicGameState(
 
 data class GameState(
     val playing: Boolean,
-    // val phase: GamePhase,
+     val phase: GamePhase,
     val players: Map<UUID, PlayerState>,
     val enactedPolicies: EnactedPolicies,
     val electionTracker: Int,
@@ -39,6 +40,7 @@ data class GameState(
     fun public(): PublicGameState =
         PublicGameState(
             playing,
+            phase,
             players.mapValues { it.value.public(!playing) },
             enactedPolicies,
             electionTracker,
