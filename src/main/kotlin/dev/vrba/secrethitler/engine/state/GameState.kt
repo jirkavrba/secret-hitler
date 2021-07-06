@@ -4,8 +4,9 @@ import dev.vrba.secrethitler.engine.GamePhase
 import dev.vrba.secrethitler.engine.Party
 import dev.vrba.secrethitler.engine.election.Election
 import dev.vrba.secrethitler.engine.election.Vote
-import dev.vrba.secrethitler.original.EnactedPolicies
-import dev.vrba.secrethitler.original.election.Government
+import dev.vrba.secrethitler.engine.EnactedPolicies
+import dev.vrba.secrethitler.engine.election.Government
+import dev.vrba.secrethitler.engine.state.transitions.StateTransition
 import java.security.Policy
 import java.util.*
 
@@ -51,6 +52,14 @@ data class GameState(
             election?.masked,
             winners
         )
+
+    fun transition(transition: StateTransition): GameState {
+        if (transition.validate(this)) {
+            return transition.evaluate(this)
+        }
+
+        return this
+    }
 
     val playersAlive: List<UUID> = players.values.filter { it.alive }.map { it.id }
 
