@@ -1,5 +1,7 @@
 package dev.vrba.secrethitler.engine
 
+import dev.vrba.secrethitler.engine.exception.IllegalNumberOfPlayersException
+
 fun getPresidentialAbilities(players: Int): Map<Int, PresidentialAbility> =
     when (players) {
         5, 6 -> mapOf(
@@ -23,7 +25,7 @@ fun getPresidentialAbilities(players: Int): Map<Int, PresidentialAbility> =
             5 to PresidentialAbility.ExecutePlayer,
         )
 
-        else -> throw IllegalArgumentException("Number of players must be between 5 and 10 inclusive.")
+        else -> throw IllegalNumberOfPlayersException()
     }
 
 enum class PresidentialAbility {

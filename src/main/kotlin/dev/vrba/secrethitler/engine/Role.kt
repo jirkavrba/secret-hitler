@@ -1,5 +1,7 @@
 package dev.vrba.secrethitler.engine
 
+import dev.vrba.secrethitler.engine.exception.IllegalNumberOfPlayersException
+
 fun createRolePool(players: Int): List<Role> =
     when (players) {
         5 -> createRolePool(1, 3)
@@ -8,7 +10,7 @@ fun createRolePool(players: Int): List<Role> =
         8 -> createRolePool(2, 5)
         9 -> createRolePool(3, 5)
         10 -> createRolePool(3, 6)
-        else -> throw IllegalArgumentException("Number of players must be between 5 and 10 inclusive")
+        else -> throw IllegalNumberOfPlayersException()
     }
 
 private fun createRolePool(fascists: Int, liberals: Int): List<Role> =
