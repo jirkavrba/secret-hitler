@@ -1,4 +1,4 @@
-package dev.vrba.secrethitler.engine
+package dev.vrba.secrethitler.engine.election
 
 enum class Vote(val value: Int) {
     Ja(1),
