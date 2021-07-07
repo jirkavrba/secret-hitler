@@ -151,7 +151,7 @@ export default createStore({
                     {
                         type: "engine",
                         party: "fascist",
-                        content: "A fascist policy has been enacted"
+                        content: "A @claim[fascist] policy has been enacted"
                     },
                     {
                         type: "player",
@@ -161,12 +161,12 @@ export default createStore({
                     {
                         type: "engine",
                         party: null,
-                        content: "A fascist policy has been enacted"
+                        content: "@player[5e06a048-866c-4edf-9bdd-8e6ee3b98c10] claimed @claim[fascist] @claim[fascist] @claim[liberal]"
                     },
                     {
                         type: "engine",
                         party: "liberal",
-                        content: "A fascist policy has been enacted"
+                        content: "A @claim[liberal] policy has been enacted"
                     },
                     {
                         type: "player",
