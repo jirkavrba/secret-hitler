@@ -25,7 +25,7 @@ export default createStore({
             id: "3cba6f3c-487f-40d0-a9fb-cdc43c88adfd",
             gameState: {
                 playing: true,
-                phase: "VOTING_FOR_THE_GOVERNMENT",
+                phase: "NOT_VOTING_FOR_THE_GOVERNMENT",
                 players: {
                     "3cba6f3c-487f-40d0-a9fb-cdc43c88adfd": {
                         id: "3cba6f3c-487f-40d0-a9fb-cdc43c88adfd",
@@ -76,8 +76,7 @@ export default createStore({
                     chancellor: "3cba6f3c-487f-40d0-a9fb-cdc43c88adfd",
                 },
                 lastElectedGovernment: {
-                    president: "5e06a048-866c-4edf-9bdd-8e6ee3b98c10",
-                    // president: "8ddd8049-155b-4980-b7e6-a79de1e0a20c",
+                    president: "8ddd8049-155b-4980-b7e6-a79de1e0a20c",
                     chancellor: "27f1f378-3b4e-428d-8639-766bac14f619",
                 },
                 election: {
@@ -108,7 +107,10 @@ export default createStore({
                    // "5e06a048-866c-4edf-9bdd-8e6ee3b98c10"
                 ],
                 availablePolicies: [],
-                availableClaims: [],
+                availablePartyMembershipClaims: [
+                    'fascist',
+                    'liberal'
+                ],
                 peekedPolicies: [],
                 investigatedPartyMembership: null
             }

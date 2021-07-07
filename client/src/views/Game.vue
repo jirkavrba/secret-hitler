@@ -8,6 +8,7 @@
         <ElectionTracker/>
         <Decks/>
       </div>
+      <PartyMembershipClaims/>
       <Votes/>
     </div>
     <div class="">CHAT</div>
@@ -29,10 +30,12 @@ import ElectionTracker from "../components/game/ElectionTracker.vue";
 import Decks from "../components/game/Decks.vue";
 import Votes from "../components/game/Votes.vue";
 import GamePhase from "../components/game/GamePhase.vue";
+import PartyMembershipClaims from "../components/game/PartyMembershipClaims.vue";
 
 export default defineComponent({
   name: "Game",
   components: {
+    PartyMembershipClaims,
     GamePhase,
     Votes,
     Decks,
