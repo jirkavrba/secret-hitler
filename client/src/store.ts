@@ -143,10 +143,38 @@ export default createStore({
                     {
                         type: "player",
                         sender: "34c3cac2-8009-4470-aa0b-1d0ab5ee0270",
-                        content: "Libtard"
+                        content: `
+                        Libtard sending a really
+                        long messages
+                        literally spamming the chat`
+                    },
+                    {
+                        type: "engine",
+                        party: "fascist",
+                        content: "A fascist policy has been enacted"
+                    },
+                    {
+                        type: "player",
+                        sender: "5e06a048-866c-4edf-9bdd-8e6ee3b98c10",
+                        content: "Another day, another message or something"
+                    },
+                    {
+                        type: "engine",
+                        party: null,
+                        content: "A fascist policy has been enacted"
+                    },
+                    {
+                        type: "engine",
+                        party: "liberal",
+                        content: "A fascist policy has been enacted"
+                    },
+                    {
+                        type: "player",
+                        sender: "5e06a048-866c-4edf-9bdd-8e6ee3b98c10",
+                        content: "Another day, another message or something"
                     },
                 ],
-                enabled: false
+                enabled: true
             }
         }
     }

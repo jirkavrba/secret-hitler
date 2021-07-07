@@ -30,7 +30,7 @@
           <img src="../../assets/fascists.png" class="w-20">
         </div>
       </div>
-      <div :class="`absolute w-full h-full flex flex-col items-center justify-center left-0 top-0 rounded-3xl bg-opacity-80
+      <div :class="`absolute w-full h-full flex flex-col items-center justify-center left-0 top-0 rounded-3xl bg-opacity-75
           ${$store.state.game.gameState.winners === 'fascists' ? 'bg-red-900' : 'bg-blue-900'}`">
         <img :src="images[$store.state.game.gameState.winners]" class="m-5">
         <b :class="`uppercase text-4xl font-bold ${$store.state.game.gameState.winners === 'fascists' ? 'text-red-300' : 'text-blue-300'}`">{{ $store.state.game.gameState.winners }}</b>

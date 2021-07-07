@@ -1,7 +1,7 @@
 <template>
-  <div :class="`m-3 ${colors[role].background} p-3 rounded-lg`">
-    <div :class="`font-black text-tiny ${colors[role].foreground}`">{{ player.username }}</div>
-    <p>{{ message.content }}</p>
+  <div :class="`m-3 ${colors[role].background} px-3 py-2 rounded flex flex-col items-start`">
+    <div :class="`mr-1 text-tiny font-black ${colors[role].foreground}`">{{ player.username }}:</div>
+    <p class="text-sm text-gray-700">{{ message.content }}</p>
   </div>
 </template>
 
@@ -15,15 +15,15 @@ export default defineComponent({
     colors: {
       LIBERAL: {
         foreground: "text-blue-500",
-        background: "bg-gradient-to-r from-gray-100 to-blue-100"
+        background: "bg-blue-50"
       },
       FASCIST: {
         foreground: "text-red-500",
-        background: "bg-gradient-to-r from-gray-100 to-red-100"
+        background: "bg-red-50"
       },
       HITLER: {
         foreground: "text-red-700",
-        background: "bg-gradient-to-r from-gray-100 to-red-200"
+        background: "bg-red-100"
       },
       HIDDEN: {
         foreground: "text-gray-500",
