@@ -111,9 +111,10 @@ export default createStore({
                     // ['fascist', 'fascist', 'liberal'],
                     // ['fascist', 'liberal', 'liberal'],
                     // ['liberal', 'liberal', 'liberal'],
-                    ["fascist", "fascist"],
-                    ["fascist", "liberal"],
-                    ["liberal", "liberal"],
+
+                    // ["fascist", "fascist"],
+                    // ["fascist", "liberal"],
+                    // ["liberal", "liberal"],
                 ],
                 availablePartyMembershipClaims: [
                     // 'fascist',
