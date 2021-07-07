@@ -108,8 +108,8 @@ export default createStore({
                 ],
                 availablePolicies: [],
                 availablePartyMembershipClaims: [
-                    'fascist',
-                    'liberal'
+                    // 'fascist',
+                    // 'liberal'
                 ],
                 peekedPolicies: [],
                 investigatedPartyMembership: null

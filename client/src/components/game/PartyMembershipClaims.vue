@@ -1,5 +1,5 @@
 <template>
-  <div class="p-3 flex">
+  <div class="p-3 flex" v-if="$store.state.game.playerState.availablePartyMembershipClaims.length > 0">
     <div class="p-5 pt-3 bg-gray-100 rounded-3xl shadow-lg relative">
       <h1 class="text-sm font-bold uppercase tracking-wide text-gray-900 text-center">Claim investigated party
         membership</h1>
