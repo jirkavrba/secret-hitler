@@ -1,6 +1,14 @@
 <template>
   <div class="grid grid-cols-4 container">
-    <Players/>
+    <div class="flex flex-col">
+      <Players/>
+      <div class="text-center text-gray-400 text-tiny">
+        Btw this shit is <a href="https://github.com/jirkavrba/secret-hitler" target="_blank" class="transition text-gray-500 hover:text-purple-500">open source</a>
+      </div>
+      <div class="text-center text-gray-400 text-tiny">
+        Originally designed by <a href="https://secrethitler.com" target="_blank" class="transition text-gray-500 hover:text-purple-500">the Goat, Wolf, & Cabbage</a>
+      </div>
+    </div>
     <div class="col-span-2 flex flex-col">
       <GamePhase/>
       <EnactedPolicies/>
