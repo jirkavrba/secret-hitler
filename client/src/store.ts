@@ -89,7 +89,7 @@ export default createStore({
                         "27f1f378-3b4e-428d-8639-766bac14f619": "NONE"
                     }
                 },
-                winners: "liberals"
+                winners: null
             },
             playerState: {
                 id: "33c3cac2-8009-4470-aa0b-1d0ab5ee0270",

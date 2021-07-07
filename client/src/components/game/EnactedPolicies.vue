@@ -31,7 +31,7 @@
         </div>
       </div>
       <div :class="`absolute w-full h-full flex flex-col items-center justify-center left-0 top-0 rounded-3xl bg-opacity-75
-          ${$store.state.game.gameState.winners === 'fascists' ? 'bg-red-900' : 'bg-blue-900'}`">
+          ${$store.state.game.gameState.winners === 'fascists' ? 'bg-red-900' : 'bg-blue-900'}`" v-if="$store.state.game.gameState.winners !== null">
         <img :src="images[$store.state.game.gameState.winners]" class="m-5">
         <b :class="`uppercase text-4xl font-bold ${$store.state.game.gameState.winners === 'fascists' ? 'text-red-300' : 'text-blue-300'}`">{{ $store.state.game.gameState.winners }}</b>
         <span class="text-gray-200 font-black">won this game</span>
