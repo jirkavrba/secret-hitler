@@ -1,35 +1,31 @@
 <template>
-  <div :class="'h-24 mt-3 px-5 py-3 rounded-lg flex flex-row items-center transition ' +
+  <div :class="`${Object.keys($store.state.game.gameState.players).length === 10 ? 'mt-2' : 'mt-3'} h-20 px-5 rounded-xl flex flex-row items-center transition relative ` +
     colors[role].background +
-    (alive ? '' : ' filter grayscale opacity-50') +
-    ((selectable && !enabled) ? ' opacity-25' : ' ') +
+    (alive ? '' : ' filter grayscale opacity-30') +
+    ((selectable && !enabled) ? ' opacity-50' : ' ') +
     ((selectable && enabled) ? ' cursor-pointer transform hover:translate-x-3 hover:shadow-xl shadow-red-500 hover:opacity-90 ': '') +
-    (isPresident() ? ' ring-4 ring-yellow-500' : '') +
-    (isChancellor() ? ' ring-4 ring-green-700' : '')
+    (isPresident() ? ' ring-4 ring-indigo-500' : '') +
+    (isChancellor() ? ' ring-4 ring-purple-500' : '')
    ">
     <img :src="roles[role]" :alt="role" class="w-12 mr-3">
     <div class="flex-grow flex flex-col">
-      <span :class="`uppercase text-tiny font-bold tracking-wide ${colors[role].foreground}`">{{ role }}</span>
+      <span :class="`uppercase text-tiny font-bold tracking-wide ${colors[role].foreground}`" v-if="role !== 'hidden'">{{ role }}</span>
       <span :class="`w-full font-black whitespace-nowrap text-white mb-1 ${alive ? '' : ' line-through'}`">{{
           username.substr(0, 20)
         }}</span>
 
-      <div class="flex">
-        <div v-if="isPresident()" class="text-white text-xs font-black bg-yellow-500 px-2 py-1 rounded mr-2">President
-        </div>
-        <div v-if="isChancellor()" class="text-white text-xs font-black bg-green-700 px-2 py-1 rounded mr-2">
-          Chancellor
-        </div>
-        <div v-if="isLastElectedPresident()"
-             class="text-white text-xs font-black bg-gray-500 px-2 py-1 rounded mr-2 opacity-25">President
-        </div>
-        <div v-if="isLastElectedChancellor()"
-             class="text-white text-xs font-black bg-gray-500 px-2 py-1 rounded mr-2 opacity-25">Chancellor
-        </div>
+      <div :class="`absolute ${showVotes() ? 'right-20' : 'right-2'} top-0`">
+        <div v-if="isPresident()" class="text-white text-ultra-tiny font-black bg-indigo-500 px-2 py-1 rounded-b-lg text-center">President</div>
+        <div v-if="isChancellor()" class="text-white text-ultra-tiny font-black bg-purple-500 px-2 py-1 rounded-b-lg text-center">Chancellor</div>
+      </div>
+
+      <div :class="`absolute ${showVotes() ? 'right-40' : 'right-20'} top-0`">
+        <div v-if="isLastElectedPresident()" class="opacity-50 text-white text-ultra-tiny font-black bg-gray-500 px-2 py-1 rounded-b-lg text-center">Last president</div>
+        <div v-if="isLastElectedChancellor()" class="opacity-50 text-white text-ultra-tiny font-black bg-gray-500 px-2 py-1 rounded-b-lg text-center">Last chancellor</div>
       </div>
     </div>
     <div v-if="showVotes() && alive">
-      <div v-if="vote() === 'HIDDEN'" class="opacity-50">
+      <div v-if="vote() === 'NONE'" class="opacity-25">
         <img :src="votes.none" alt="Player has not voted yet" title="Player has not voted yet"
              class="w-12 rounded filter grayscale animate-pulse">
       </div>
@@ -88,20 +84,20 @@ export default defineComponent({
   data: () => ({
     colors: {
       "liberal": {
-        background: "bg-blue-900 filter",
-        foreground: "text-blue-500",
+        background: "bg-gradient-to-r from-blue-400 to-gray-400",
+        foreground: "text-blue-100",
       },
       "fascist": {
-        background: "bg-red-800 filter",
-        foreground: "text-red-400"
+        background: "bg-gradient-to-r from-red-400 to-gray-400",
+        foreground: "text-red-100"
       },
       "hitler": {
-        background: "bg-red-900 filter",
-        foreground: "text-red-200",
+        background: "bg-gradient-to-r from-red-500 to-gray-400",
+        foreground: "text-red-900",
       },
       "hidden": {
-        background: "bg-gray-700",
-        foreground: "text-gray-400"
+        background: "bg-gray-400",
+        foreground: "text-gray-300"
       }
     },
     roles: {

@@ -9,7 +9,8 @@ module.exports = {
         gray: colors.trueGray,
       },
       fontSize: {
-        "tiny": ".75rem"
+        "tiny": ".75rem",
+        "ultra-tiny": ".6rem",
       },
       ringWidth: {
         "highlight": "16px"

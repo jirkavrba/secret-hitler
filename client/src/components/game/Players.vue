@@ -1,11 +1,11 @@
 <template>
   <div class="p-3">
-    <div class="rounded bg-gray-900 p-5 z-10 relative">
-      <h1 class="text-md font-bold uppercase tracking-wide text-gray-500">Players</h1>
+    <div class="rounded-3xl bg-gray-100 pt-3 p-5 z-10 relative shadow-lg">
+      <h1 class="text-xs text-center font-bold uppercase tracking-wide text-gray-500">Players</h1>
 
       <Highlight v-if="$store.state.game.playerState.availablePlayerTargets.length > 0"/>
 
-      <div class="mt-10">
+      <div class="mt-2">
         <Player v-for="player in $store.state.game.gameState.players"
             :key="player.id"
             :id="player.id"

@@ -1,28 +1,28 @@
 <template>
   <div class="p-3 pb-0">
-    <div class="rounded p-5 bg-gray-900">
-      <div class="bg-blue-900 filter saturate-50 p-5 rounded flex">
-        <div v-for="i in liberal" :key="i" class="bg-blue-600 m-3 rounded w-24 h-32">
+    <div class="rounded-3xl p-5 bg-gray-100 shadow-lg">
+      <div class="p-5 rounded-2xl flex justify-center bg-gradient-to-r from-blue-200 to-blue-300">
+        <div v-for="i in liberal" :key="i" class="bg-blue-100 m-3 rounded-lg w-24 h-32 shadow-lg">
           <img src="../../assets/policies/liberal.png" alt="Fascist policy"
                :class="`transform filter -translate-y-2 scale-75 drop-shadow-lg ${rotation(i)}`">
         </div>
-        <div v-for="i in (4 - liberal)" :key="i" class=" m-3 rounded w-24 h-32 border-2 border-blue-500 border-dashed"></div>
-        <div class="m-3 rounded w-24 h-32 border-2 border-blue-500 bg-blue-800 flex items-center justify-center">
+        <div v-for="i in (4 - liberal)" :key="i" class=" m-3 rounded-lg w-24 h-32 border-2 bg-blue-300 border-blue-100 shadow-inner"></div>
+        <div class="m-3 rounded-lg w-24 h-32 border-2 border-blue-100 bg-blue-400 flex items-center justify-center shadow-inner">
           <img src="../../assets/liberals.png" class="w-20">
         </div>
       </div>
 
-      <div class="bg-red-900 filter saturate-50 p-5 rounded flex mt-5">
-        <div v-for="i in fascist" :key="i" class="bg-red-600 m-3 rounded w-24 h-32">
+      <div class="p-5 rounded-2xl flex justify-center mt-5 bg-gradient-to-r from-red-200 to-red-300">
+        <div v-for="i in fascist" :key="i" class="bg-red-100 m-3 rounded-lg w-24 h-32 shadow-lg">
           <img src="../../assets/policies/fascist.png" alt="Fascist policy"
                :class="`transform filter -translate-y-2 scale-75 drop-shadow-lg ${rotation(5 + i)}`">
         </div>
-        <div v-for="i in (5 - fascist)" :key="i" class="m-3 rounded w-24 h-32 border-2 border-red-500 border-dashed flex items-center justify-center">
+        <div v-for="i in (5 - fascist)" :key="i" class="m-3 rounded-lg w-24 h-32 border-2 bg-red-300 border-red-100 flex items-center justify-center shadow-inner">
           <div v-if="ability(fascist + i) !== null" class="w-12">
             <img :src="ability(fascist + i).image" :alt="ability(fascist + i).text" :title="ability(fascist + i).text">
           </div>
         </div>
-        <div class="m-3 rounded w-24 h-32 border-2 border-red-500 bg-red-800 flex items-center justify-center">
+        <div class="m-3 rounded-lg w-24 h-32 border-2 border-red-100 bg-red-400 flex items-center justify-center">
           <img src="../../assets/fascists.png" class="w-20">
         </div>
       </div>

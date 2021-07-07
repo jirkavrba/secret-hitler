@@ -1,23 +1,21 @@
 <template>
-  <div class="absolute left-0 top-0 ring-offset-black w-full h-full rounded highlight">
+  <div class="absolute left-0 top-0 w-full h-full rounded-3xl highlight bg-gradient-to-br from-yellow-300 to-transparent animate-highlight z-0">
   </div>
 </template>
 
 <style scoped>
-.highlight {
-  outline: 12px solid white;
+.animate-highlight {
   animation: 1s highlight infinite alternate ease-in-out;
 }
 
 @keyframes highlight{
   from {
-    outline-color: rgba(255, 255, 255, 1);
+    opacity: 0.5;
   }
   to {
-    outline-color: rgba(255, 255, 255, 0.15);
+    opacity: 0.1;
   }
 }
-
 </style>
 
 <script>
