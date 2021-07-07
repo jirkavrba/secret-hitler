@@ -124,7 +124,28 @@ export default createStore({
                 investigatedPartyMembership: null
             },
             chat: {
-                messages: [],
+                messages: [
+                    {
+                        type: "player",
+                        sender: "3cba6f3c-487f-40d0-a9fb-cdc43c88adfd",
+                        content: "Hello there"
+                    },
+                    {
+                        type: "player",
+                        sender: "33c3cac2-8009-4470-aa0b-1d0ab5ee0270",
+                        content: "General"
+                    },
+                    {
+                        type: "player",
+                        sender: "5e06a048-866c-4edf-9bdd-8e6ee3b98c10",
+                        content: "Kenobi"
+                    },
+                    {
+                        type: "player",
+                        sender: "34c3cac2-8009-4470-aa0b-1d0ab5ee0270",
+                        content: "Libtard"
+                    },
+                ],
                 enabled: false
             }
         }
