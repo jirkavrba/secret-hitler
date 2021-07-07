@@ -9,6 +9,7 @@
         <Decks/>
       </div>
       <PartyMembershipClaims/>
+      <PoliciesClaims/>
       <Votes/>
     </div>
     <div class="">CHAT</div>
@@ -31,10 +32,12 @@ import Decks from "../components/game/Decks.vue";
 import Votes from "../components/game/Votes.vue";
 import GamePhase from "../components/game/GamePhase.vue";
 import PartyMembershipClaims from "../components/game/PartyMembershipClaims.vue";
+import PoliciesClaims from "../components/game/PoliciesClaims.vue";
 
 export default defineComponent({
   name: "Game",
   components: {
+    PoliciesClaims,
     PartyMembershipClaims,
     GamePhase,
     Votes,
