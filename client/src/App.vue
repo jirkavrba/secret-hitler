@@ -1,5 +1,5 @@
 <template>
-  <div class="app-container bg-gray-300">
+  <div class="app-container bg-gray-200">
     <div class="xl:hidden block bg-black flex flex-col items-center justify-center app-container">
       <img alt="Secret Hitler logo" src="./assets/logo.png" class="w-64">
 
@@ -18,8 +18,11 @@
 </template>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap');
+
 .app-container {
   min-height: 100vh;
+  font-family: 'Roboto Slab', serif;
 }
 </style>
 

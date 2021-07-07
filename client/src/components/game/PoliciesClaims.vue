@@ -9,7 +9,7 @@
         <div v-for="claim in $store.state.game.playerState.availablePolicies"
              :class="`hover:${color(claim)} flex flex-col items-center mx-2 transition transform filter scale-90 hover:scale-100 cursor-pointer p-3 m-3 rounded-full group`"
              @click="sendClaim(claim)">
-          <div class="relative w-36 h-36 transition transform" v-if="claim[0].length === 3">
+          <div class="relative w-36 h-36 transition transform" v-if="claim.length === 3">
             <div class="ml-1 relative">
               <div v-for="(policy, i) in claim" :class="`absolute w-16 left-${i * 7 + 2} top-${i * 5 + 1} shadow transition transform group-hover:${rotateThree[i]}`">
                 <img :src="images[policy]" alt="">

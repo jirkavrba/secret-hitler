@@ -89,7 +89,7 @@ export default createStore({
                         "27f1f378-3b4e-428d-8639-766bac14f619": "NONE"
                     }
                 },
-                winners: null
+                winners: "liberals"
             },
             playerState: {
                 id: "33c3cac2-8009-4470-aa0b-1d0ab5ee0270",
@@ -107,10 +107,10 @@ export default createStore({
                    // "5e06a048-866c-4edf-9bdd-8e6ee3b98c10"
                 ],
                 availablePolicies: [
-                    // ['fascist', 'fascist', 'fascist'],
-                    // ['fascist', 'fascist', 'liberal'],
-                    // ['fascist', 'liberal', 'liberal'],
-                    // ['liberal', 'liberal', 'liberal'],
+                    ['fascist', 'fascist', 'fascist'],
+                    ['fascist', 'fascist', 'liberal'],
+                    ['fascist', 'liberal', 'liberal'],
+                    ['liberal', 'liberal', 'liberal'],
 
                     // ["fascist", "fascist"],
                     // ["fascist", "liberal"],
