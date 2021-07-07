@@ -1,12 +1,12 @@
 <template>
-  <div class="p-3 flex" v-if="$store.state.game.playerState.availablePolicies.length > 0">
+  <div class="p-3 flex" v-if="$store.state.game.playerState.availablePolicyClaims.length > 0">
     <div class="p-5 pt-3 bg-gray-100 rounded-3xl shadow-lg relative">
       <h1 class="text-sm font-bold uppercase tracking-wide text-gray-900 text-center">
-        Claim policies
+        claim policies
       </h1>
 
       <div class="flex justify-center mt-3">
-        <div v-for="claim in $store.state.game.playerState.availablePolicies"
+        <div v-for="claim in $store.state.game.playerState.availablePolicyClaims"
              :class="`hover:${color(claim)} flex flex-col items-center mx-2 transition transform filter scale-90 hover:scale-100 cursor-pointer p-3 m-3 rounded-full group`"
              @click="sendClaim(claim)">
           <div class="relative w-36 h-36 transition transform" v-if="claim.length === 3">

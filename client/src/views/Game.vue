@@ -18,6 +18,7 @@
       </div>
       <PartyMembershipClaims/>
       <PoliciesClaims/>
+      <Policies/>
       <Votes/>
     </div>
     <Chat/>
@@ -42,10 +43,12 @@ import GamePhase from "../components/game/GamePhase.vue";
 import PartyMembershipClaims from "../components/game/PartyMembershipClaims.vue";
 import PoliciesClaims from "../components/game/PoliciesClaims.vue";
 import Chat from "../components/game/Chat.vue";
+import Policies from "../components/game/Policies.vue";
 
 export default defineComponent({
   name: "Game",
   components: {
+    Policies,
     Chat,
     PoliciesClaims,
     PartyMembershipClaims,

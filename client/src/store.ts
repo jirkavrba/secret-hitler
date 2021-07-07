@@ -107,10 +107,15 @@ export default createStore({
                    // "5e06a048-866c-4edf-9bdd-8e6ee3b98c10"
                 ],
                 availablePolicies: [
-                    ['fascist', 'fascist', 'fascist'],
-                    ['fascist', 'fascist', 'liberal'],
-                    ['fascist', 'liberal', 'liberal'],
-                    ['liberal', 'liberal', 'liberal'],
+                    'fascist',
+                    'fascist',
+                    'liberal'
+                ],
+                availablePolicyClaims: [
+                    // ['fascist', 'fascist', 'fascist'],
+                    // ['fascist', 'fascist', 'liberal'],
+                    // ['fascist', 'liberal', 'liberal'],
+                    // ['liberal', 'liberal', 'liberal'],
 
                     // ["fascist", "fascist"],
                     // ["fascist", "liberal"],

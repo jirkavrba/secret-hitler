@@ -23,6 +23,8 @@ module.exports = {
   variants: {
     extend: {
       scale: ["group-hover"],
+      blur: ["hover"],
+      saturate: ["hover"],
       rotate: ["group-hover"]
     },
   },
