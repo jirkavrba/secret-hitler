@@ -25,7 +25,7 @@ export default createStore({
             id: "3cba6f3c-487f-40d0-a9fb-cdc43c88adfd",
             gameState: {
                 playing: true,
-                phase: "NOT_VOTING_FOR_THE_GOVERNMENT",
+                phase: "VOTING_FOR_THE_GOVERNMENT",
                 players: {
                     "3cba6f3c-487f-40d0-a9fb-cdc43c88adfd": {
                         id: "3cba6f3c-487f-40d0-a9fb-cdc43c88adfd",
@@ -103,8 +103,8 @@ export default createStore({
                     "27f1f378-3b4e-428d-8639-766bac14f619": "LIBERAL"
                 },
                 availablePlayerTargets: [
-                   "33c3cac2-8009-4470-aa0b-1d0ab5ee0270",
-                   "5e06a048-866c-4edf-9bdd-8e6ee3b98c10"
+                   // "33c3cac2-8009-4470-aa0b-1d0ab5ee0270",
+                   // "5e06a048-866c-4edf-9bdd-8e6ee3b98c10"
                 ],
                 availablePolicies: [],
                 availableClaims: [],

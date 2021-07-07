@@ -1,5 +1,5 @@
 <template>
-  <div class="absolute left-0 top-0 ring-offset-black w-full h-full rounded highlight">
+  <div class="absolute left-0 top-0 ring-offset-black w-full h-full rounded highlight z-50">
   </div>
 </template>
 

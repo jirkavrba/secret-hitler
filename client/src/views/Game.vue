@@ -2,6 +2,7 @@
   <div class="grid grid-cols-4 container">
     <Players/>
     <div class="col-span-2 flex flex-col">
+      <GamePhase/>
       <EnactedPolicies/>
       <div class="flex flex-row item-center justify-between">
         <ElectionTracker/>
@@ -27,10 +28,12 @@ import EnactedPolicies from "../components/game/EnactedPolicies.vue";
 import ElectionTracker from "../components/game/ElectionTracker.vue";
 import Decks from "../components/game/Decks.vue";
 import Votes from "../components/game/Votes.vue";
+import GamePhase from "../components/game/GamePhase.vue";
 
 export default defineComponent({
   name: "Game",
   components: {
+    GamePhase,
     Votes,
     Decks,
     ElectionTracker,
