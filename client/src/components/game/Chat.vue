@@ -13,7 +13,7 @@
       <div class="flex flex-row" v-if="$store.state.game.chat.enabled">
         <input type="text" class="flex-grow rounded-lg p-3 focus:ring-4 focus:outline-none shadow-lg">
         <button
-            class="transition bg-purple-500 hover:bg-purple-700 focus:bg-purple-700 text-white text-sm p-3 uppercase shadow hover:shadow-lg ml-3 rounded-lg font-black">
+            class="transition bg-purple-500 hover:bg-purple-700 focus:outline-none hover:ring-4 focus:ring-4 ring-purple-300 focus:bg-purple-700 text-white text-sm p-3 uppercase shadow hover:shadow-lg ml-3 rounded-lg font-black">
           Send
         </button>
       </div>
