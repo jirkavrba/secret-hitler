@@ -1,6 +1,6 @@
 <template>
   <div :class="`mx-3 p-3 border-2 rounded mt-3 ${colors[message.party || 'default']}`">
-    <p v-html="parseMessage(message.content)" class="text-gray-800"></p>
+    <p v-html="parseMessage(message.content)" class="text-gray-800 text-tiny"></p>
   </div>
 </template>
 
@@ -20,7 +20,7 @@ export default defineComponent({
   methods: {
     parseMessage(message) {
       for (let player of Object.values(this.$store.state.game.gameState.players)) {
-        message = message.replaceAll(`@player[${player.id}]`, `<b class="bg-gray-800 text-white px-3 py-1 rounded-full text-tiny">${player.username}</b>`);
+        message = message.replaceAll(`@player[${player.id}]`, `<b class="bg-gray-800 text-white px-2 py-0.5 rounded-full text-tiny">${player.username}</b>`);
       }
 
       const claims = {
@@ -29,7 +29,7 @@ export default defineComponent({
       }
 
       for (let claim in claims) {
-        const common = "inline-block rounded-full text-white text-tiny py-1 px-3 my-1"
+        const common = "inline-block rounded-full text-white text-tiny py-0.5 px-2 my-1"
         const css = claims[claim];
         message = message.replaceAll(`@claim[${claim}]`, `<b class="${common} ${css}">${claim}</b>`)
       }
