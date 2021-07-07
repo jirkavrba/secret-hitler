@@ -1,20 +1,19 @@
 <template>
-  <div class="absolute left-0 top-0 ring-offset-black w-full h-full rounded highlight z-50">
+  <div class="absolute left-0 top-0 ring-offset-black w-full h-full rounded highlight">
   </div>
 </template>
 
 <style scoped>
 .highlight {
-  outline: 10px solid white;
+  outline: 12px solid white;
   animation: 1s highlight infinite alternate ease-in-out;
 }
 
 @keyframes highlight{
   from {
-    outline-offset: 5px;
+    outline-color: rgba(255, 255, 255, 1);
   }
   to {
-    outline-offset: 20px;
     outline-color: rgba(255, 255, 255, 0.15);
   }
 }
