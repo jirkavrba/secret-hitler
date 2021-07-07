@@ -122,6 +122,10 @@ export default createStore({
                 ],
                 peekedPolicies: [],
                 investigatedPartyMembership: null
+            },
+            chat: {
+                messages: [],
+                enabled: false
             }
         }
     }

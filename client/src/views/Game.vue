@@ -12,7 +12,7 @@
       <PoliciesClaims/>
       <Votes/>
     </div>
-    <div class="">CHAT</div>
+    <Chat/>
   </div>
 </template>
 
@@ -33,10 +33,12 @@ import Votes from "../components/game/Votes.vue";
 import GamePhase from "../components/game/GamePhase.vue";
 import PartyMembershipClaims from "../components/game/PartyMembershipClaims.vue";
 import PoliciesClaims from "../components/game/PoliciesClaims.vue";
+import Chat from "../components/game/Chat.vue";
 
 export default defineComponent({
   name: "Game",
   components: {
+    Chat,
     PoliciesClaims,
     PartyMembershipClaims,
     GamePhase,
