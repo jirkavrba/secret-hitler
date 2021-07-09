@@ -5,7 +5,7 @@ import dev.vrba.secrethitler.engine.Party;
 import dev.vrba.secrethitler.engine.state.GameState;
 import org.jetbrains.annotations.NotNull;
 
-public class HandleFailedElection implements StateTransition{
+public class HandleFailedElection implements StateTransition {
     @Override
     public @NotNull GameState apply(@NotNull GameState state) {
         int electionTracker = state.getElectionTracker() + 1;

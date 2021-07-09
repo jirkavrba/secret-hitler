@@ -18,9 +18,9 @@ public abstract class GameStateMessage implements StateTransition {
     public boolean validate(@NotNull GameState state) {
         // Validate that the message was sent by one of the players, that is still alive
         return state.isPlaying() &&
-               state.getPlayers().containsKey(this.sender) &&
-               state.getPlayers().get(this.sender).isAlive() &&
-               this.validateState(state);
+                state.getPlayers().containsKey(this.sender) &&
+                state.getPlayers().get(this.sender).isAlive() &&
+                this.validateState(state);
     }
 
     protected abstract boolean validateState(@NotNull GameState state);

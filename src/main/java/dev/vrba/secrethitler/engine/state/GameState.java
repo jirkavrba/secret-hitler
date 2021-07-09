@@ -53,8 +53,8 @@ public class GameState {
                 .stream()
                 .map(PlayerState::toPublicState)
                 .collect(Collectors.toMap(
-                    PublicPlayerState::getId,
-                    Function.identity()
+                        PublicPlayerState::getId,
+                        Function.identity()
                 ));
 
         Map<UUID, Vote> election = this.election == null ? null : this.election.maskVotesUnlessFinished();

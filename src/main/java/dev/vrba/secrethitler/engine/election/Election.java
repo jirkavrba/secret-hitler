@@ -31,7 +31,7 @@ public class Election {
 
     public @NotNull Map<UUID, Vote> maskVotesUnlessFinished() {
         // There is no need for masking the votes if election is already finished
-        if (this.isFinished())  {
+        if (this.isFinished()) {
             return this.votes;
         }
 

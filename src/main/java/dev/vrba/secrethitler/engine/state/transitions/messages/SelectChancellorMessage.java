@@ -19,7 +19,7 @@ public class SelectChancellorMessage extends GameStateMessage {
 
     @Override
     protected boolean validateState(@NotNull GameState state) {
-                // The phase is correct
+        // The phase is correct
         return state.getPhase() == Phase.PRESIDENT_IS_SELECTING_CHANCELLOR &&
                 // The sender is president
                 state.getGovernment().getPresident().equals(this.sender) &&

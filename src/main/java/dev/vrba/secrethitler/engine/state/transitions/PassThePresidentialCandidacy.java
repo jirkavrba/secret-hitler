@@ -30,7 +30,7 @@ public class PassThePresidentialCandidacy implements StateTransition {
 
         // Set the current government (the last elected government is not handled)
         return state.withGovernment(new Government(next))
-                    .withPhase(Phase.PRESIDENT_IS_SELECTING_CHANCELLOR)
-                    .withPlayers(players);
+                .withPhase(Phase.PRESIDENT_IS_SELECTING_CHANCELLOR)
+                .withPlayers(players);
     }
 }

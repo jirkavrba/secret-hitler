@@ -25,7 +25,7 @@ public class VoteMessage extends GameStateMessage {
     @Override
     protected boolean validateState(@NotNull GameState state) {
         return state.getPhase() == Phase.VOTING_FOR_THE_GOVERNMENT &&
-               state.getElection() != null;
+                state.getElection() != null;
     }
 
     @Override
@@ -34,8 +34,8 @@ public class VoteMessage extends GameStateMessage {
 
         if (election.isFinished()) {
             final Supplier<StateTransition> transition = election.isSuccessful()
-                ? HandleSuccessfulElection::new
-                : HandleFailedElection::new;
+                    ? HandleSuccessfulElection::new
+                    : HandleFailedElection::new;
 
             return state.apply(transition);
         }
