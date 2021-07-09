@@ -1,8 +1,9 @@
-package dev.vrba.secrethitler.engine.state.transitions;
+package dev.vrba.secrethitler.engine.state.transitions.messages;
 
 import dev.vrba.secrethitler.engine.Phase;
 import dev.vrba.secrethitler.engine.election.Government;
 import dev.vrba.secrethitler.engine.state.GameState;
+import dev.vrba.secrethitler.engine.state.transitions.messages.GameStateMessage;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.UUID;
