@@ -8,7 +8,7 @@ import java.util.UUID;
 
 @Getter
 @AllArgsConstructor
-public class PartyMembershipClaim implements Claim {
+public class PartyMembershipClaim {
     private final UUID player;
     private final Party partyMembership;
 }

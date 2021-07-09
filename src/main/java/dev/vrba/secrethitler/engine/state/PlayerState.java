@@ -2,7 +2,8 @@ package dev.vrba.secrethitler.engine.state;
 
 import dev.vrba.secrethitler.engine.Party;
 import dev.vrba.secrethitler.engine.Role;
-import dev.vrba.secrethitler.engine.claims.Claim;
+import dev.vrba.secrethitler.engine.claims.PartyMembershipClaim;
+import dev.vrba.secrethitler.engine.claims.PoliciesClaim;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.With;
@@ -32,7 +33,9 @@ public class PlayerState {
 
     private final @NotNull List<Party> availablePolicies;
 
-    private final @NotNull List<Claim> availableClaims;
+    private final @NotNull List<PoliciesClaim> availablePoliciesClaims;
+
+    private final @NotNull List<PartyMembershipClaim> availablePartyMembershipClaims;
 
     private final @NotNull List<Party> peekedPolicies;
 

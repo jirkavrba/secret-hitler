@@ -8,6 +8,6 @@ import java.util.List;
 
 @Getter
 @AllArgsConstructor
-public class PoliciesClaim implements Claim {
+public class PoliciesClaim {
     private final List<Party> policies;
 }
