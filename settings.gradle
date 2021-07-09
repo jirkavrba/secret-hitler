@@ -1,4 +1,0 @@
-rootProject.name = 'secret-hitler'
-include 'src:engine'
-findProject(':src:engine')?.name = 'engine'
-
