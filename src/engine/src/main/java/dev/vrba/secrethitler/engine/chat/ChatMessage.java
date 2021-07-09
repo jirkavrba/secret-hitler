@@ -8,6 +8,13 @@ import lombok.Getter;
 @AllArgsConstructor(access = AccessLevel.PROTECTED)
 public abstract class ChatMessage {
 
+    public enum Type {
+        PLAYER,
+        ENGINE
+    }
+
+    protected final Type type;
+
     protected final String content;
 
 }
