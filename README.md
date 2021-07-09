@@ -1,6 +1,4 @@
-<div style="text-align: center">
-<h1>Secret Hitler</h1>
-</div>
+# Secret Hitler
 
 My online implementation of the Secret Hitler card game, inspired by [SecretHitler.io](https://secrethitler.io).
 
