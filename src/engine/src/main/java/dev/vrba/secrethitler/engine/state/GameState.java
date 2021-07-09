@@ -74,16 +74,18 @@ public class GameState {
         );
     }
 
-    public @NotNull List<UUID> getEligibleChancellorCandidates() {
-        List<PlayerState> playersAlive = this.players.values()
+    public @NotNull List<PlayerState> getPlayersAlive() {
+        return this.players.values()
                 .stream()
                 .filter(PlayerState::isAlive)
                 .toList();
+    }
 
+    public @NotNull List<UUID> getEligibleChancellorCandidates() {
         // In case that 5 or less players are left in the game, term limiting is only applied to last elected chancellor
-        boolean lastElectedPresidentIsEligible = playersAlive.size() <= 5;
+        boolean lastElectedPresidentIsEligible = this.getPlayersAlive().size() <= 5;
 
-        List<UUID> eligiblePlayers = playersAlive.stream().map(PlayerState::getId).toList();
+        List<UUID> eligiblePlayers = this.getPlayersAlive().stream().map(PlayerState::getId).toList();
 
         if (this.lastElectedGovernment != null) {
             // Last elected chancellor is always terms limited
