@@ -2,7 +2,6 @@ package dev.vrba.secrethitler.engine.state.transitions.messages;
 
 import dev.vrba.secrethitler.engine.Phase;
 import dev.vrba.secrethitler.engine.election.Election;
-import dev.vrba.secrethitler.engine.election.Government;
 import dev.vrba.secrethitler.engine.state.GameState;
 import org.jetbrains.annotations.NotNull;
 
@@ -31,6 +30,6 @@ public class SelectChancellorMessage extends GameStateMessage {
     public @NotNull GameState apply(@NotNull GameState state) {
         return state.withPhase(Phase.VOTING_FOR_THE_GOVERNMENT)
                 .withElection(new Election(state.getPlayers().keySet()))
-                .withGovernment(new Government(state.getGovernment().getPresident(), this.selected));
+                .withGovernment(state.getGovernment().nominate(selected));
     }
 }
