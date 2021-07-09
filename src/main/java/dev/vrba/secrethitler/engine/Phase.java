@@ -1,4 +1,4 @@
-package dev.vrba.secrethitler.original;
+package dev.vrba.secrethitler.engine;
 
 public enum Phase {
     PRESIDENT_IS_SELECTING_CHANCELLOR,

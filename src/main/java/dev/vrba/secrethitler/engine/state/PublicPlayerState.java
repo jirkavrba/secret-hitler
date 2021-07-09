@@ -1,6 +1,6 @@
-package dev.vrba.secrethitler.original.state;
+package dev.vrba.secrethitler.engine.state;
 
-import dev.vrba.secrethitler.original.Role;
+import dev.vrba.secrethitler.engine.Role;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import org.jetbrains.annotations.NotNull;

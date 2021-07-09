@@ -1,9 +1,9 @@
-package dev.vrba.secrethitler.original.state.transitions;
+package dev.vrba.secrethitler.engine.state.transitions;
 
-import dev.vrba.secrethitler.original.EnactedPolicies;
-import dev.vrba.secrethitler.original.Party;
-import dev.vrba.secrethitler.original.Phase;
-import dev.vrba.secrethitler.original.state.GameState;
+import dev.vrba.secrethitler.engine.EnactedPolicies;
+import dev.vrba.secrethitler.engine.Party;
+import dev.vrba.secrethitler.engine.Phase;
+import dev.vrba.secrethitler.engine.state.GameState;
 import org.jetbrains.annotations.NotNull;
 
 public class CheckPoliciesForWinnerParty implements StateTransition {

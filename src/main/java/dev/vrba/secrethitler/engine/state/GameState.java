@@ -1,12 +1,12 @@
-package dev.vrba.secrethitler.original.state;
+package dev.vrba.secrethitler.engine.state;
 
-import dev.vrba.secrethitler.original.EnactedPolicies;
-import dev.vrba.secrethitler.original.Party;
-import dev.vrba.secrethitler.original.Phase;
-import dev.vrba.secrethitler.original.election.Election;
-import dev.vrba.secrethitler.original.election.Government;
-import dev.vrba.secrethitler.original.election.Vote;
-import dev.vrba.secrethitler.original.state.transitions.StateTransition;
+import dev.vrba.secrethitler.engine.EnactedPolicies;
+import dev.vrba.secrethitler.engine.Party;
+import dev.vrba.secrethitler.engine.Phase;
+import dev.vrba.secrethitler.engine.election.Election;
+import dev.vrba.secrethitler.engine.election.Government;
+import dev.vrba.secrethitler.engine.election.Vote;
+import dev.vrba.secrethitler.engine.state.transitions.StateTransition;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.With;

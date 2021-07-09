@@ -1,9 +1,9 @@
-package dev.vrba.secrethitler.original.state.transitions;
+package dev.vrba.secrethitler.engine.state.transitions;
 
-import dev.vrba.secrethitler.original.Phase;
-import dev.vrba.secrethitler.original.election.Election;
-import dev.vrba.secrethitler.original.election.Vote;
-import dev.vrba.secrethitler.original.state.GameState;
+import dev.vrba.secrethitler.engine.Phase;
+import dev.vrba.secrethitler.engine.election.Election;
+import dev.vrba.secrethitler.engine.election.Vote;
+import dev.vrba.secrethitler.engine.state.GameState;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.Objects;

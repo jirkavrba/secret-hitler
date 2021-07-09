@@ -1,4 +1,4 @@
-package dev.vrba.secrethitler.original.election;
+package dev.vrba.secrethitler.engine.election;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

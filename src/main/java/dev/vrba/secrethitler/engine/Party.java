@@ -1,4 +1,4 @@
-package dev.vrba.secrethitler.original;
+package dev.vrba.secrethitler.engine;
 
 public enum Party {
     FASCIST,
