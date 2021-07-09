@@ -1,5 +1,5 @@
 <template>
-  <div :class="`mx-3 p-3 border-l-4 mt-3 ${colors[message.party || 'default']}`">
+  <div :class="`mx-3 p-3 rounded shadow border-l-4 mt-3 ${colors[message.party || 'default']}`">
     <p v-html="parseMessage(message.content)" class="text-gray-800 text-tiny"></p>
   </div>
 </template>
@@ -12,8 +12,8 @@ export default defineComponent({
   props: ["message"],
   data: () => ({
     colors: {
-      fascist: 'text-red-500 border-red-500',
-      liberal: 'text-blue-500 border-blue-500',
+      fascist: 'text-red-500 border-red-500 bg-red-50',
+      liberal: 'text-blue-500 border-blue-500 bg-blue-50',
       default: 'text-gray-700 border-gray-500'
     }
   }),
