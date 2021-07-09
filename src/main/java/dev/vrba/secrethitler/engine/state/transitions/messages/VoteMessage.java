@@ -7,7 +7,6 @@ import dev.vrba.secrethitler.engine.state.GameState;
 import dev.vrba.secrethitler.engine.state.transitions.HandleFailedElection;
 import dev.vrba.secrethitler.engine.state.transitions.HandleSuccessfulElection;
 import dev.vrba.secrethitler.engine.state.transitions.StateTransition;
-import dev.vrba.secrethitler.engine.state.transitions.messages.GameStateMessage;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.Objects;
