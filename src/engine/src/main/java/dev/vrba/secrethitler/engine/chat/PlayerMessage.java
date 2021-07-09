@@ -16,12 +16,4 @@ public class PlayerMessage extends ChatMessage {
         super(Type.PLAYER, content);
         this.sender = sender;
     }
-
-    public static @NotNull String mention(@NotNull UUID player) {
-        return String.format("@player[%s]", player);
-    }
-
-    public static @NotNull String claim(@NotNull Party party) {
-        return String.format("@claim[%s]", party.toString().toLowerCase(Locale.ROOT));
-    }
 }
