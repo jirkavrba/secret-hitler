@@ -1,14 +1,14 @@
 <template>
   <div :class="`${Object.keys($store.state.game.gameState.players).length === 10 ? 'mt-2' : 'mt-3'} h-20 px-5 rounded-xl flex flex-row items-center transition relative ` +
-    colors[role].background +
-    (alive ? '' : ' filter grayscale opacity-30') +
+    (alive ? colors[role].background : 'bg-gray-700') +
     ((selectable && !enabled) ? ' opacity-50' : ' ') +
     ((selectable && enabled) ? ' cursor-pointer transform hover:translate-x-3 hover:shadow-xl shadow-red-500 hover:opacity-90 ': '') +
     (isPresident() ? ' ring-4 ring-indigo-500' : '') +
     (isChancellor() ? ' ring-4 ring-purple-500' : '')
    ">
+    <img src="../../assets/killed.png" alt="" class="absolute w-32 h-32 -left-5" v-if="!alive">
     <img :src="roles[role]" :alt="role" class="w-12 mr-3">
-    <div class="flex-grow flex flex-col">
+    <div :class="`flex-grow flex flex-col ${(alive ? '' : ' filter grayscale opacity-30')}`">
       <span :class="`uppercase text-tiny font-bold tracking-wide ${colors[role].foreground}`" v-if="role !== 'hidden'">{{ role }}</span>
       <span :class="`w-full font-black whitespace-nowrap text-white mb-1 ${alive ? '' : ' line-through'}`">{{
           username.substr(0, 20)

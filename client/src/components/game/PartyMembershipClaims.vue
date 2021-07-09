@@ -6,7 +6,7 @@
 
       <div class="flex justify-center mt-3">
         <div v-for="claim in $store.state.game.playerState.availablePartyMembershipClaims" class="flex flex-col items-center mx-2
-          transition transform filter scale-90 hover:scale-100 cursor-pointer opacity-75 hover:opacity-100 hover:shadow-lg p-3 rounded-3xl hover:bg-white"
+          transition transform filter scale-90 hover:scale-100 cursor-pointer hover:opacity-100 hover:shadow-lg p-3 rounded-3xl hover:bg-white"
              @click="sendClaim(claim)">
           <img :src="images[claim]" alt="" class="border-4 rounded-full">
           <div :class="`uppercase font-black text-sm mt-1 ${colors[claim]}`">{{ claim }}</div>

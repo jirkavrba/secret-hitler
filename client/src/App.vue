@@ -18,11 +18,11 @@
 </template>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Asap:wght@500&display=swap');
 
 .app-container {
   min-height: 100vh;
-  font-family: 'Roboto Slab', serif;
+  font-family: 'Asap', sans-serif;
 }
 </style>
 

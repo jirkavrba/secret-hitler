@@ -5,7 +5,7 @@
         Select policy that will be <b class="text-red-700">discarded</b>
       </h1>
 
-      <div class="flex">
+      <div class="flex justify-center">
         <div v-for="policy in $store.state.game.playerState.availablePolicies"
              @click="discard(policy)"
              class="m-3 w-24 transition transform filter shadow-lg cursor-pointer hover:scale-75 hover:rotate-12 hover:blur hover:saturate-50">

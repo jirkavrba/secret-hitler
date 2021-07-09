@@ -108,7 +108,7 @@ export default createStore({
                 ],
                 availablePolicies: [
                     'fascist',
-                    'fascist',
+                    // 'fascist',
                     'liberal'
                 ],
                 availablePolicyClaims: [

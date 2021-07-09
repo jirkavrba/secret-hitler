@@ -4,7 +4,7 @@
       <h1 class="text-xs text-center font-bold uppercase tracking-wide text-gray-500">Chat</h1>
 
       <div class="my-5 bg-white flex-grow rounded-xl shadow-lg overflow-y-scroll overflow-x-hidden">
-        <div v-for="message in $store.state.game.chat.messages.reverse()">
+        <div v-for="(message, i) in $store.state.game.chat.messages.reverse()" :key="i">
           <PlayerMessage v-if="message.type === 'player'" :message="message"/>
           <EngineMessage v-else :message="message"/>
         </div>
