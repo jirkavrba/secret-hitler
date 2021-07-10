@@ -1,6 +1,6 @@
 applicationType: default
 defaultPackage: dev.vrba.secrethitler
 testFramework: junit
-sourceLanguage: java
+sourceLanguage: kotlin
 buildTool: gradle
-features: [annotation-api, app-name, data, data-jpa, gradle, h2, http-client, java, java-application, jdbc-hikari, junit, logback, lombok, mockito, netty-server, readme, shade, yaml]
+features: [annotation-api, app-name, data, data-jpa, gradle, h2, http-client, jdbc-hikari, junit, kotlin, kotlin-application, logback, mockito, netty-server, readme, shade, yaml]
